@@ -377,4 +377,25 @@ class Content extends Base
         ];
         return $this->getData('exactMatch', $params);
     }
+
+    /**
+     * 查询多个class下的推荐数据
+     *
+     * @param $firsttitle
+     * @param $classidArr
+     * @param $limit
+     * @param $order
+     * @return array|bool
+     */
+    public function firsttitleInClass($firsttitle, $classidArr, $limit, $order)
+    {
+        $params = [
+            'firsttitle'   => $firsttitle,
+            'classidArr'   => $classidArr,
+            'limit'   => intval($limit),
+            'order'   => $order,
+        ];
+        return $this->getData('firsttitleInClass', $params);
+    }
+
 }

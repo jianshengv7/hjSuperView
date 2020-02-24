@@ -298,4 +298,18 @@ class ContentModel extends BaseModel
         $page = $this->getCurrentPage();
         return $this->dal()->getExactMatch($field,$value, $classid, $page, $limit, $ispic, $order);
     }
+
+    /**
+     * 查询多个class下的推荐数据
+     *
+     * @param int $firsttitle 头条等级
+     * @param array $classidArr  分类数组
+     * @param int $limit
+     * @param string $order
+     * @return mixed
+     */
+    public function firsttitleInClass($firsttitle = 1, $classidArr = [], $limit = 0, $order = 'newstime')
+    {
+        return $this->dal()->firsttitleInClass($firsttitle, $classidArr, $limit, $order);
+    }
 }
