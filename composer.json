@@ -1,9 +1,9 @@
 {
-    "name": "huajun/superview",
+    "name": "njxzwh/superview",
     "type": "library",
     "description": "A simple CMS content helper.",
     "keywords": [
-        "hj",
+        "njxzwh",
         "superview"
     ],
     "license": "MIT",
