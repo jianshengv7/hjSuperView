@@ -312,4 +312,17 @@ class ContentModel extends BaseModel
     {
         return $this->dal()->firsttitleInClass($firsttitle, $classidArr, $limit, $order);
     }
+
+    /**
+     * 查询classid不等于某个值
+     *
+     * @param int $classid
+     * @param int $limit
+     * @param string $order
+     * @return mixed
+     */
+    public function neq($classid = 0, $limit = 0, $order = 'newtime')
+    {
+        return $this->dal()->getNeq($classid, $limit, $order);
+    }
 }

@@ -398,4 +398,22 @@ class Content extends Base
         return $this->getData('firsttitleInClass', $params);
     }
 
+    /**
+     * 查询classid不等于某个值
+     *
+     * @param $classid
+     * @param $limit
+     * @param $order
+     * @return array|bool
+     */
+    public function getNeq($classid, $limit, $order)
+    {
+        $params = [
+            'classid'   => $classid,
+            'limit'   => intval($limit),
+            'order'   => $order,
+        ];
+        return $this->getData('neq', $params);
+    }
+
 }
