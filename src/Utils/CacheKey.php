@@ -41,6 +41,7 @@ class CacheKey
         $key = '';
         foreach ($depend as $k => $v) {
             if (!in_array($k, ['limit', 'isPic', 'classid'])) {
+                $v = !is_array($v) ? $v : implode(',', $v);
                 $key .= '::' . $v;
             }
         }
