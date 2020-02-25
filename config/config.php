@@ -36,7 +36,7 @@ return [
         'banner' => SuperView\Dal\Api\Banner::class,
         'custom' => SuperView\Dal\Api\Custom::class,
         'comment' => SuperView\Dal\Api\Comment::class,
-        'inner' => SuperView\Dal\Api\Inner::class,
+        'inner' => SuperView\Dal\Api\Inner::class,git
     ],
 
     'pagination' => [

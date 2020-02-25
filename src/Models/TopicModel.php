@@ -16,7 +16,7 @@ class TopicModel extends BaseModel
     public function good($showzt = 0, $classid = 0 , $limit = 0, $order = 'addtime')
     {
         $page = $this->getCurrentPage();
-        return $this->dal['topic']->getGood($showzt, $classid, $page, $limit, $order);
+        return $this->dal['zt']->getGood($showzt, $classid, $page, $limit, $order);
     }
 
     /**
@@ -25,7 +25,7 @@ class TopicModel extends BaseModel
     public function index($zcid = 0, $classid = 0, $limit = 0, $order = 'addtime')
     {
         $page = $this->getCurrentPage();
-        return $this->dal['topic']->getList($zcid, $classid, $page, $limit, $order);
+        return $this->dal['zt']->getList($zcid, $classid, $page, $limit, $order);
     }
 
     /**
@@ -34,7 +34,7 @@ class TopicModel extends BaseModel
     public function indexCount($zcid = 0, $classid = 0, $limit = 0, $order = 'addtime')
     {
         $page = $this->getCurrentPage();
-        $data = $this->dal['topic']->getList($zcid, $classid, $page, $limit, $order);
+        $data = $this->dal['zt']->getList($zcid, $classid, $page, $limit, $order);
         if(empty($data['count'])){
             return -1;
         }
@@ -49,7 +49,7 @@ class TopicModel extends BaseModel
         if (empty($id) && empty($path)) {
             return false;
         }
-        $data = $this->dal['topic']->getInfo($id, $path);
+        $data = $this->dal['zt']->getInfo($id, $path);
         return $data;
     }
 
@@ -58,14 +58,14 @@ class TopicModel extends BaseModel
      */
     public function categories()
     {
-        $categories = $this->dal['topic']->getCategories();
+        $categories = $this->dal['zt']->getCategories();
         return $categories;
     }
 
     public function taginfo($ztid,$classid,$limit)
     {
         $page = $this->getCurrentPage();
-        return $this->dal['topic']->taginfo($ztid, $classid, $page, $limit);
+        return $this->dal['zt']->taginfo($ztid, $classid, $page, $limit);
     }
     /**
      * 详情页定制接口 todo 测试方法待删除
@@ -78,7 +78,7 @@ class TopicModel extends BaseModel
      */
     public function specials($id, $model = 'soft',$baikelimit = 5, $softlimit = 8)
     {
-        $data = $this->dal['topic']->getSpecials($id, $model, $baikelimit, $softlimit);
+        $data = $this->dal['zt']->getSpecials($id, $model, $baikelimit, $softlimit);
         foreach ($data AS $key => $datum){
             $data[$key] = $this->addListInfo($datum);
         }
@@ -96,7 +96,7 @@ class TopicModel extends BaseModel
             return false;
         }
         $page = $this->getCurrentPage();
-        return $this->dal['topic']->getContentByTopicId($ztid, $page, $limit);
+        return $this->dal['zt']->getContentByTopicId($ztid, $page, $limit);
     }
 
 }
