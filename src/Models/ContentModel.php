@@ -321,7 +321,7 @@ class ContentModel extends BaseModel
      * @param string $order
      * @return mixed
      */
-    public function neq($classid = 0, $limit = 0, $order = 'newtime')
+    public function neq($classid = 0, $limit = 0, $order = 'newstime')
     {
         return $this->dal()->getNeq($classid, $limit, $order);
     }
