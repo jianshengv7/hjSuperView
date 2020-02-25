@@ -42,6 +42,15 @@ class ContentModel extends BaseModel
     }
 
     /**
+     *  排序信息列表
+     */
+    public function order($classid = 0, $limit = 0, $order = 'newstime')
+    {
+        $page = $this->getCurrentPage();
+        return $this->dal()->getOrderList($classid, $page, $limit, $order);
+    }
+
+    /**
      * 置顶信息列表.
      */
     public function top($level = 0, $classid = 0, $limit = 0, $isPic = 0, $order = 'newstime')
