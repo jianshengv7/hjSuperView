@@ -4,6 +4,20 @@ namespace SuperView\Models;
 
 class TopicModel extends BaseModel
 {
+    /**
+     * 专题推荐
+     *
+     * @param int $showzt
+     * @param int $classid
+     * @param int $limit
+     * @param string $order
+     * @return mixed
+     */
+    public function good($showzt = 0, $classid = 0 , $limit = 0, $order = 'addtime')
+    {
+        $page = $this->getCurrentPage();
+        return $this->dal['topic']->getGood($showzt, $classid, $page, $limit, $order);
+    }
 
     /**
      * 专题列表

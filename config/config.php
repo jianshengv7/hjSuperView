@@ -16,7 +16,7 @@ return [
     'models' => [
         'content' => SuperView\Models\ContentModel::class,
         'category' => SuperView\Models\CategoryModel::class,
-        'topic' => SuperView\Models\TopicModel::class,
+        'zt' => SuperView\Models\TopicModel::class,
         'tag' => SuperView\Models\TagModel::class,
         'utils' => SuperView\Models\UtilsModel::class,
         'chip' => SuperView\Models\ChipModel::class,
@@ -29,7 +29,7 @@ return [
     'dals' => [
         'content' => SuperView\Dal\Api\Content::class,
         'category' => SuperView\Dal\Api\Category::class,
-        'topic' => SuperView\Dal\Api\Topic::class,
+        'zt' => SuperView\Dal\Api\Topic::class,
         'tag' => SuperView\Dal\Api\Tag::class,
         'utils' => SuperView\Dal\Api\Utils::class,
         'chip' => SuperView\Dal\Api\Chip::class,

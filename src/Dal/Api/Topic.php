@@ -16,6 +16,28 @@ class Topic extends Base
     }
 
     /**
+     *专题推荐
+     *
+     * @param $showzt
+     * @param $classid
+     * @param $page
+     * @param $limit
+     * @param $order
+     * @return array|bool
+     */
+    public function getGood($showzt, $classid, $page, $limit, $order)
+    {
+        $params = [
+            'showzt'  => ($showzt),
+            'classid'   => ($classid),
+            'page'  => intval($page),
+            'limit' => intval($limit),
+            'order' => $order,
+        ];
+        return $this->getData('good', $params);
+    }
+
+    /**
      * 专题列表
      * @return boolean | array
      */
