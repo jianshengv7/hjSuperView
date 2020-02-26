@@ -462,6 +462,14 @@ SuperView::get('soft')->page(false)->recent(); // 默认为第一页, 作用相�
 | classid         | classid                                      | 否    | saytime     |
 | limit           | 每页数据量, 需要大于1,0为不限制              | 是    | null     |
 | random           | 是否随机                                        | 否    | 1     |
+
+#### 2.footer($group)
+首页底部推荐
+参数:
+| 参数名          | 描述                                         | 必填  | 默认     |
+| --------------- | -------------------------------------------- | :---: | :------: |
+| group         |  分组字段                                      | 是    | 'data_type'     |
+
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.

@@ -55,7 +55,8 @@ return [
         'soft' => ['soft','android','ios','miniapp', 'dnb'],
         'news' => [ 'news'],
         'zt' => ['zt'],
-        'strategy' => ['strategy']
+        'strategy' => ['strategy'],
+        'inner' => ['footer', 'inner']
     ],
 
 

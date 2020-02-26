@@ -18,4 +18,16 @@ class InnerModel extends BaseModel
     {
         return $this->dal['inner']->getInfo($is_ztid, $classid, $limit, $random);
     }
+
+
+    /**
+     * 首页底部推荐
+     *
+     * @param string $group
+     * @return mixed
+     */
+    public function footer($group = 'data_type')
+    {
+        return $this->dal()->getFooter($group);
+    }
 }

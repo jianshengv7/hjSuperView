@@ -27,5 +27,18 @@ class Inner extends Base
         return $this->getData('lists', $params);
     }
 
+    /**
+     * 首页底部推荐
+     *
+     * @param $group
+     * @return array|bool
+     */
+    public function getFooter($group)
+    {
+        $params = [
+            'group' => $group,
+        ];
+        return $this->getData('footer', $params);
+    }
 
 }
