@@ -16,13 +16,12 @@ class Inner extends Base
      * @param $order
      * @return array|bool
      */
-    public function getInfo($is_ztid, $classid, $limit, $order, $random)
+    public function getInfo($is_ztid, $classid, $limit, $random)
     {
         $params = [
             'is_ztid' => intval($is_ztid),
             'classid' => intval($classid),
             'limit'     => intval($limit),
-            'order' => $order,
             'random' => $random,
         ];
         return $this->getData('lists', $params);

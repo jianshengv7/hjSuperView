@@ -14,8 +14,8 @@ class InnerModel extends BaseModel
      * @param string $order
      * @return mixed
      */
-    public function lists($is_ztid = 0, $classid = 0, $limit=0, $order = 'sum' ,$random = 1)
+    public function lists($is_ztid = 0, $classid = 0, $limit=0 ,$random = 1)
     {
-        return $this->dal['inner']->getInfo($is_ztid, $classid, $limit, $order, $random);
+        return $this->dal['inner']->getInfo($is_ztid, $classid, $limit, $random);
     }
 }
