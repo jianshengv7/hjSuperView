@@ -28,6 +28,6 @@ class InnerModel extends BaseModel
      */
     public function footer($group = 'data_type')
     {
-        return $this->dal()->getFooter($group);
+        return $this->dal['foot']->getFooter($group);
     }
 }

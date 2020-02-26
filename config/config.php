@@ -24,6 +24,7 @@ return [
         'custom' => SuperView\Models\CustomModel::class,
         'comment' => SuperView\Models\CommentModel::class,
         'inner' => SuperView\Models\InnerModel::class,
+        'foot' => SuperView\Models\InnerModel::class,
     ],
 
     'dals' => [
@@ -37,6 +38,7 @@ return [
         'custom' => SuperView\Dal\Api\Custom::class,
         'comment' => SuperView\Dal\Api\Comment::class,
         'inner' => SuperView\Dal\Api\Inner::class,
+        'foot' =>  SuperView\Dal\Api\Inner::class,
     ],
 
     'pagination' => [
