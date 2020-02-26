@@ -452,7 +452,7 @@ SuperView::get('soft')->page(false)->recent(); // 默认为第一页, 作用相�
 | limit           | 每页数据量, 需要大于1,0为不限制              | 是    | null     |
 
 ###  inner 内联模块
-#### 1.info($is_ztid, $classid, $limit, $order)
+#### 1.lists($is_ztid, $classid, $limit, $order)
 获取内联信息
 
 参数:

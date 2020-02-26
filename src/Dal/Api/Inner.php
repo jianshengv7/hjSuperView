@@ -24,7 +24,7 @@ class Inner extends Base
             'limit'     => intval($limit),
             'order' => $order,
         ];
-        return $this->getData('info', $params);
+        return $this->getData('lists', $params);
     }
 
 
