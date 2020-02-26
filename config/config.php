@@ -58,7 +58,7 @@ return [
         'news' => [ 'news'],
         'zt' => ['zt'],
         'strategy' => ['strategy'],
-        'inner' => ['footer', 'inner']
+        'inner' => ['foot', 'inner']
     ],
 
 
