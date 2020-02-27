@@ -99,4 +99,18 @@ class TopicModel extends BaseModel
         return $this->dal['zt']->getContentByTopicId($ztid, $page, $limit);
     }
 
+    /**
+     *
+     * ios/安卓 列表页专题定制方法
+     *
+     * @param int $classid
+     * @param int $limit
+     * @param string $order
+     * @return mixed
+     */
+    public function recentInClass($classid = 0 , $limit = 0, $order = 'addtime')
+    {
+        return $this->dal['zt']->recentInClass($classid, $limit, $order);
+    }
+
 }

@@ -126,4 +126,23 @@ class Topic extends Base
         ];
         return $this->getData('specials', $params);
     }
+
+    /**
+     * ios/安卓 列表页专题定制方法
+     *
+     * @param $classid
+     * @param $limit
+     * @param $order
+     * @return array|bool
+     */
+    public function recentInClass($classid, $limit, $order)
+    {
+        $params = [
+            'classid'  => $classid,
+            'limit' => $limit,
+            'order' => $order,
+
+        ];
+        return $this->getData('recentInClass', $params);
+    }
 }
