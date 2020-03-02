@@ -141,8 +141,25 @@ class Topic extends Base
             'classid'  => $classid,
             'limit' => $limit,
             'order' => $order,
-
         ];
         return $this->getData('recentInClass', $params);
+    }
+
+    /**
+     * DNB 详情页专题定制方法 （通过软件id和classid获取列表）
+     *
+     * @param $id
+     * @param $classid
+     * @param $limit
+     * @return array|bool
+     */
+    public function getListInIdClassId($id, $classid, $limit)
+    {
+        $params = [
+            'classid'  => $classid,
+            'limit' => $limit,
+            'id' => $id,
+        ];
+        return $this->getData('listInIdClassId', $params);
     }
 }

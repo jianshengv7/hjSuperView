@@ -113,4 +113,16 @@ class TopicModel extends BaseModel
         return $this->dal['zt']->recentInClass($classid, $limit, $order);
     }
 
+    /**
+     * DNB 详情页专题定制方法 （通过软件id和classid获取列表）
+     *
+     * @param $id
+     * @param $classid
+     * @param $limit
+     * @return mixed
+     */
+    public function listInIdClassId($id = 0, $classid = 0, $limit = 0)
+    {
+        return $this->dal['zt']->getListInIdClassId($id, $classid, $limit);
+    }
 }

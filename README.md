@@ -371,7 +371,7 @@ SuperView::get('soft')->page(false)->recent(); // 默认为第一页, 作用相�
 | limit         | 每页数据量,0为不限制                         | 否    | 0        |
 | order         | 排序字段                                     | 否    | lastdotime |
 
-### topic 专题模块
+### zt 专题模块
 
 #### 0. good($showzt, $classid, $limit, $order)
 获取推荐专题
@@ -417,6 +417,17 @@ ios/安卓屏道页定制专题
 | classid        | 分类ID                                                 | 是    | 0     |
 | limit            | 每页数据量,0为不限制                       | 否    | 0      |
 | order            | 排序字段                      | 否    | addtime      | 
+
+#### 5.listInIdClassId($id, $classid, $limit)
+dnb 详情页专题定制方法 （通过软件id和classid获取列表）
+
+参数:
+| 参数名           | 描述                                          | 必填  | 默认     |
+| --------------- | -------------------------------------------- | :---: | :------: |
+| classid         | 分类ID                                        | 是    | 0     |
+| limit           | 每页数据量,0为不限制                            | 否    | 0      |
+| id              | 软件id                                        | 是    | 0      | 
+
 
 ### tag TAG模块
 
