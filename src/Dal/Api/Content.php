@@ -436,4 +436,18 @@ class Content extends Base
         return $this->getData('order', $params);
     }
 
+    /**
+     * 通过cid获取厂商
+     *
+     * @param $cid
+     * @return array|bool
+     */
+    public function getCompany($cid)
+    {
+        $params = [
+            'cid' => intval($cid),
+        ];
+        return $this->getData('company', $params);
+    }
+
 }

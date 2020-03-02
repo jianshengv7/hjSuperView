@@ -334,4 +334,15 @@ class ContentModel extends BaseModel
     {
         return $this->dal()->getNeq($classid, $limit, $order);
     }
+
+    /**
+     * 通过cid获取厂商
+     *
+     * @param int $cid
+     * @return mixed
+     */
+    public function company($cid = 0)
+    {
+        return  $this->dal()->getCompany($cid);
+    }
 }
