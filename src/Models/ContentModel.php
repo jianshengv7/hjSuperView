@@ -345,4 +345,18 @@ class ContentModel extends BaseModel
     {
         return  $this->dal()->getCompany($cid);
     }
+
+    /**
+     * 攻略列表
+     *
+     * @param int $game_id
+     * @param int $limit
+     * @param string $order
+     * @return mixed
+     */
+    public function strategy($game_id = 0, $limit = 0, $order = 'lastdotime')
+    {
+        $page = $this->getCurrentPage();
+        return  $this->dal()->getStrategy($game_id, $page, $limit, $order);
+    }
 }

@@ -450,4 +450,23 @@ class Content extends Base
         return $this->getData('company', $params);
     }
 
+    /**
+     * 攻略列表
+     *
+     * @param $game_id
+     * @param $page
+     * @param $limit
+     * @param $order
+     * @return array|bool
+     */
+    public function getStrategy($game_id, $page, $limit, $order)
+    {
+        $params = [
+            'game_id'   => $game_id,
+            'page'   => $page,
+            'limit'   => intval($limit),
+            'order'   => $order,
+        ];
+        return $this->getData('strategy', $params);
+    }
 }
