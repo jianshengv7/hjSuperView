@@ -349,14 +349,13 @@ class ContentModel extends BaseModel
     /**
      * 获取厂商列表（仅限厂商使用）
      *
-     * @param int $classid
      * @param int $limit
      * @param string $order
      * @return mixed
      */
-    public function hotList($classid = 0, $limit = 0, $order = "totaldown")
+    public function companyList($limit = 0, $order = "dnb_num")
     {
-        return  $this->dal()->getHotList($classid, $limit, $order);
+        return  $this->dal()->getCompanyList($limit, $order);
     }
 
     /**

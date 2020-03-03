@@ -458,14 +458,13 @@ class Content extends Base
      * @param $order
      * @return array|bool
      */
-    public function getHotList($classid, $limit, $order)
+    public function getCompanyList($limit, $order)
     {
         $params = [
-            'classid' => intval($classid),
             'limit' => intval($limit),
             'order' => $order,
         ];
-        return $this->getData('hotList', $params);
+        return $this->getData('companyList', $params);
     }
 
     /**

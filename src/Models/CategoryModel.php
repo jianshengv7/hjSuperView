@@ -205,6 +205,14 @@ class CategoryModel extends BaseModel
         return $matches;
     }
 
+    public function classPath($classpath = '')
+    {
+        if (empty($classpath)) {
+            return false;
+        }
+
+    }
+
     /**
      * 根据class_url配置获取分类页url.
      *
