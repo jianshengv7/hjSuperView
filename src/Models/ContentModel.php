@@ -347,6 +347,19 @@ class ContentModel extends BaseModel
     }
 
     /**
+     * 获取厂商列表（仅限厂商使用）
+     *
+     * @param int $classid
+     * @param int $limit
+     * @param string $order
+     * @return mixed
+     */
+    public function hotList($classid = 0, $limit = 0, $order = "totaldown")
+    {
+        return  $this->dal()->getHotList($classid, $limit, $order);
+    }
+
+    /**
      * 攻略列表
      *
      * @param int $game_id

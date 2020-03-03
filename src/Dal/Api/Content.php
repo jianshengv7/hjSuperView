@@ -451,6 +451,24 @@ class Content extends Base
     }
 
     /**
+     * 获取厂商列表（仅限厂商使用）
+     *
+     * @param $classid
+     * @param $limit
+     * @param $order
+     * @return array|bool
+     */
+    public function getHotList($classid, $limit, $order)
+    {
+        $params = [
+            'classid' => intval($classid),
+            'limit' => intval($limit),
+            'order' => $order,
+        ];
+        return $this->getData('hotList', $params);
+    }
+
+    /**
      * 攻略列表
      *
      * @param $game_id
