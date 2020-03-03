@@ -205,12 +205,25 @@ class CategoryModel extends BaseModel
         return $matches;
     }
 
+    /**
+     * 用过classpath获取分类信息
+     *
+     * @param string $classpath
+     * @return bool|mixed
+     */
     public function classPath($classpath = '')
     {
         if (empty($classpath)) {
             return false;
         }
 
+        $categorys = $this->all();
+        foreach($categorys  as $category){
+            if (strpos($category['classpath'], $classpath) !== false) {
+                return $category;
+            }
+        }
+         return false;
     }
 
     /**

@@ -486,4 +486,24 @@ class Content extends Base
         ];
         return $this->getData('strategy', $params);
     }
+
+    /**
+     * 通过$downstatus和$isgood获取热门游戏推荐列表
+     *
+     * @param $downstatus
+     * @param $isgood
+     * @param $limit
+     * @param $order
+     * @return array|bool
+     */
+    public function getrankRule($downstatus, $isgood, $limit, $order)
+    {
+        $params = [
+            'downstatus'   => $downstatus,
+            'isgood'   => $isgood,
+            'limit'   => intval($limit),
+            'order'   => $order,
+        ];
+        return $this->getData('rankRule', $params);
+    }
 }

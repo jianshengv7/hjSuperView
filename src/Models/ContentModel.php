@@ -38,7 +38,7 @@ class ContentModel extends BaseModel
     public function good($level = 0, $classid = 0, $limit = 0, $isPic = 0, $order = 'newstime')
     {
         $page = $this->getCurrentPage();
-        return $this->dal()->getLevelList('good', $classid, $page, $limit, $isPic, $level, $order);
+        return $this->dal()->getLevelList('isgood', $classid, $page, $limit, $isPic, $level, $order);
     }
 
     /**
@@ -370,5 +370,19 @@ class ContentModel extends BaseModel
     {
         $page = $this->getCurrentPage();
         return  $this->dal()->getStrategy($game_id, $page, $limit, $order);
+    }
+
+    /**
+     * 通过$downstatus和$isgood获取热门游戏推荐列表
+     *
+     * @param int $downstatus
+     * @param int $isgood
+     * @param int $limit
+     * @param string $order
+     * @return mixed
+     */
+    public function rankRule($downstatus = 0, $isgood = 0, $limit = 0, $order = 'lastdotime')
+    {
+        return  $this->dal()->getrankRule($downstatus, $isgood, $limit, $order);
     }
 }
