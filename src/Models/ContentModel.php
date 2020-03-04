@@ -396,8 +396,8 @@ class ContentModel extends BaseModel
      * @param string $order
      * @return mixed
      */
-    public function classgoodList($classgood = 0, $classid = 0, $limit = 0, $order = 'lastdotime')
+    public function classGoodList($classgood = 0, $classid = 0, $limit = 0, $order = 'lastdotime')
     {
-        return  $this->dal()->getClassgoodList($classgood, $classid, $limit, $order);
+        return  $this->dal()->getClassGoodList($classgood, $classid, $limit, $order);
     }
 }

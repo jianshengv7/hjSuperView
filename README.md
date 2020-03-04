@@ -332,7 +332,7 @@ SuperView::get('soft')->page(false)->recent(); // 默认为第一页, 作用相�
 | period        | 周期,'day','week','month','all'              | 否    | all      |
 | classid       | 分类ID                                       | 否    | 0        |
 
-#### 17.classgoodList($classgood, $classid, $limit, $order)
+#### 17.classGoodList($classgood, $classid, $limit, $order)
 soft根据classgood查询数据
 
 参数：

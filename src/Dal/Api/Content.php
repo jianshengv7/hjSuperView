@@ -517,7 +517,7 @@ class Content extends Base
      * @param $order
      * @return array|bool
      */
-    public function getClassgoodList($classgood, $classid, $limit, $order)
+    public function getClassGoodList($classgood, $classid, $limit, $order)
     {
         $params = [
             'classgood'   => $classgood,
@@ -525,6 +525,6 @@ class Content extends Base
             'limit'   => intval($limit),
             'order'   => $order,
         ];
-        return $this->getData('classgoodList', $params);
+        return $this->getData('classGoodList', $params);
     }
 }
