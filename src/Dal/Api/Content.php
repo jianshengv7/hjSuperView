@@ -458,11 +458,12 @@ class Content extends Base
      * @param $order
      * @return array|bool
      */
-    public function getCompanyList($limit, $order)
+    public function getCompanyList($limit, $order, $page)
     {
         $params = [
             'limit' => intval($limit),
             'order' => $order,
+            'page'   => $page,
         ];
         return $this->getData('companyList', $params);
     }

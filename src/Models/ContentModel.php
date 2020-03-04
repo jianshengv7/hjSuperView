@@ -355,7 +355,8 @@ class ContentModel extends BaseModel
      */
     public function companyList($limit = 0, $order = "dnb_num")
     {
-        return  $this->dal()->getCompanyList($limit, $order);
+        $page = $this->getCurrentPage();
+        return  $this->dal()->getCompanyList($limit, $order, $page);
     }
 
     /**
