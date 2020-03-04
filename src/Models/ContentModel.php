@@ -386,4 +386,18 @@ class ContentModel extends BaseModel
     {
         return  $this->dal()->getrankRule($downstatus, $isgood, $limit, $order);
     }
+
+    /**
+     * soft根据classgood查询数据
+     *
+     * @param int $classgood
+     * @param int $classid
+     * @param int $limit
+     * @param string $order
+     * @return mixed
+     */
+    public function classgoodList($classgood = 0, $classid = 0, $limit = 0, $order = 'lastdotime')
+    {
+        return  $this->dal()->getClassgoodList($classgood, $classid, $limit, $order);
+    }
 }

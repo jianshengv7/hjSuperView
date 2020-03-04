@@ -332,16 +332,16 @@ SuperView::get('soft')->page(false)->recent(); // 默认为第一页, 作用相�
 | period        | 周期,'day','week','month','all'              | 否    | all      |
 | classid       | 分类ID                                       | 否    | 0        |
 
-#### 17.firsttitleInClass($firsttitle, $classidArr, $limit, $order)
-查询多个class下的推荐数据
+#### 17.classgoodList($classgood, $classid, $limit, $order)
+soft根据classgood查询数据
 
 参数：
 | 参数名        | 描述                                         | 必填  | 默认     |
 | ------------- | -------------------------------------------- | :---: | :------: |
-| firsttitle    | 推荐等级                                     | 是    | null     |
-| classidArr    | 分类ID                                       | 是    | []       |
+| classgood    |  classgood                                 | 是    | 0     |
+| classid    | 分类ID                                       | 是    |   0     |
 | limit         | 每页数据量,0为不限制                         | 否    | 0        |
-| order         | 排序字段                                     | 否    | newstime |
+| order         | 排序字段                                     | 否    | lastdotime |
 
 #### 18.neq($classid, $limit, $order)
 查询classid不等于某个值
