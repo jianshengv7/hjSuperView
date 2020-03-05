@@ -3,7 +3,7 @@
 namespace SuperView\Dal\Api;
 
 /**
-* Comment Dal.
+* Mini Dal.
 */
 class Inner extends Base
 {

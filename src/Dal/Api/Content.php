@@ -507,24 +507,4 @@ class Content extends Base
         ];
         return $this->getData('rankRule', $params);
     }
-
-    /**
-     * soft根据classgood查询数据
-     *
-     * @param $classgood
-     * @param $classid
-     * @param $limit
-     * @param $order
-     * @return array|bool
-     */
-    public function getClassGoodList($classgood, $classid, $limit, $order)
-    {
-        $params = [
-            'classgood'   => $classgood,
-            'classid'   => $classid,
-            'limit'   => intval($limit),
-            'order'   => $order,
-        ];
-        return $this->getData('classGoodList', $params);
-    }
 }
