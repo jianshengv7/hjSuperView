@@ -16,7 +16,7 @@ class MiniModel extends BaseModel
      */
     public function infoList($field = '', $value = 0, $limit=0 ,$order = 1)
     {
-        return $this->dal['app']->getinfoList($field, $value, $limit, $order);
+        return $this->dal['mini']->getinfoList($field, $value, $limit, $order);
     }
 
 }
