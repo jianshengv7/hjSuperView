@@ -398,6 +398,17 @@ SuperView::get('soft')->page(false)->recent(); // 默认为第一页, 作用相�
 | limit         | 每页数据量,0为不限制                         | 否    | 0        |
 | order         | 排序字段                                     | 否    | newstime |
 
+#### 23.customList($fileds, $values, $limit, $order)
+自定义参数请求（多个参数以逗号分隔，多个值以逗号分隔，参数和值数量必须对应）
+
+参数：
+| 参数名        | 描述                                         | 必填  | 默认     |
+| ------------- | -------------------------------------------- | :---: | :------: |
+| $fileds        | 参数                                     | 是    | null     |
+| $values       |  值                                      | 是    |  null      |
+| $limit         | 每页数据量,0为不限制                         | 否    | 0        |
+| $order         | 排序字段                                     | 否    | newstime |
+
 ### zt 专题模块
 
 #### 0. good($showzt, $classid, $limit, $order)
@@ -455,6 +466,16 @@ dnb 详情页专题定制方法 （通过软件id和classid获取列表）
 | limit           | 每页数据量,0为不限制                            | 否    | 0      |
 | id              | 软件id                                        | 是    | 0      | 
 
+#### 6.customList($fileds, $values, $limit, $order)
+自定义参数请求（多个参数以逗号分隔，多个值以逗号分隔，参数和值数量必须对应）
+
+参数：
+| 参数名        | 描述                                         | 必填  | 默认     |
+| ------------- | -------------------------------------------- | :---: | :------: |
+| $fileds        | 参数                                     | 是    | null     |
+| $values       |  值                                      | 是    |  null      |
+| $limit         | 每页数据量,0为不限制                         | 否    | 0        |
+| $order         | 排序字段                                     | 否    | newstime |
 
 ### tag TAG模块
 

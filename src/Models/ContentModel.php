@@ -401,4 +401,18 @@ class ContentModel extends BaseModel
         return  $this->dal()->getOtherStrategy($id, $game_id, $limit, $order);
     }
 
+    /**
+     * 自定义参数请求（参数和值数量必须对应）
+     *
+     * @param $fileds
+     * @param $values
+     * @param int $limit
+     * @param string $order
+     * @return mixed
+     */
+    public function customList($fileds, $values, $limit = 0, $order = 'lastdotime')
+    {
+        return $this->dal()->getCustomList($fileds, $values, $limit, $order);
+    }
+
 }

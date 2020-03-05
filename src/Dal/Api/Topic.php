@@ -162,4 +162,24 @@ class Topic extends Base
         ];
         return $this->getData('listInIdClassId', $params);
     }
+
+    /**
+     * 自定义参数请求 （参数和值数量必须对应）
+     *
+     * @param string $fileds 请求字段 多个参数以逗号分隔
+     * @param string $values 值   多个值以多个逗号分隔
+     * @param $limit
+     * @param $order
+     * @return array|bool
+     */
+    public function getCustomList($fileds, $values, $limit, $order)
+    {
+        $params = [
+            'fileds'  => $fileds,
+            'values' => $values,
+            'limit' => $limit,
+            'order' => $order
+        ];
+        return $this->getData('customList', $params);
+    }
 }
