@@ -30,4 +30,15 @@ class InnerModel extends BaseModel
     {
         return $this->dal['foot']->getFooter($group);
     }
+
+    /**
+     * 友链
+     *
+     * @param $ztid
+     * @return mixed
+     */
+    public function friendLink($ztid = 0)
+    {
+        return $this->dal['inner']->getFriendLink($ztid);
+    }
 }

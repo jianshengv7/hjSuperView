@@ -41,4 +41,18 @@ class Inner extends Base
         return $this->getData('footer', $params);
     }
 
+    /**
+     * 友链
+     *
+     * @param $ztid
+     * @return array|bool
+     */
+    public function getFriendLink($ztid)
+    {
+        $params = [
+            'ztid' => $ztid,
+        ];
+        return $this->getData('friendLink', $params);
+    }
+
 }
