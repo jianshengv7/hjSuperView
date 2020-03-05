@@ -387,5 +387,18 @@ class ContentModel extends BaseModel
         return  $this->dal()->getrankRule($downstatus, $isgood, $limit, $order);
     }
 
+    /**
+     * 通过id不等级和game_id等于获取攻略
+     *
+     * @param $id
+     * @param int $game_id
+     * @param int $limit
+     * @param string $order
+     * @return mixed
+     */
+    public function otherStrategy($id, $game_id = 0, $limit = 0, $order = 'newstime')
+    {
+        return  $this->dal()->getOtherStrategy($id, $game_id, $limit, $order);
+    }
 
 }

@@ -507,4 +507,25 @@ class Content extends Base
         ];
         return $this->getData('rankRule', $params);
     }
+
+    /**
+     * 通过id不等级和game_id等于获取攻略
+     *
+     * @param $id
+     * @param $game_id
+     * @param $limit
+     * @param $order
+     * @return array|bool
+     */
+    public function getOtherStrategy($id, $game_id, $limit, $order)
+    {
+        $params = [
+            'id'   => $id,
+            'game_id'   => $game_id,
+            'limit'   => intval($limit),
+            'order'   => $order,
+        ];
+        return $this->getData('otherStrategy', $params);
+    }
+
 }

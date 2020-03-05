@@ -56,7 +56,7 @@ return [
     //新缓存规则部分是使用
     'type' => [
         'category' => ['category'],
-        'soft' => ['soft','android','ios','miniapp', 'dnb', 'app'],
+        'soft' => ['soft','android','ios','miniapp', 'dnb', 'mini'],
         'news' => [ 'news'],
         'zt' => ['zt'],
         'strategy' => ['strategy'],

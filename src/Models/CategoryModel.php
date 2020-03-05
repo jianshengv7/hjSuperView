@@ -206,7 +206,7 @@ class CategoryModel extends BaseModel
     }
 
     /**
-     * 用过classpath获取分类信息
+     * 通过classpath获取分类信息
      *
      * @param string $classpath
      * @return bool|mixed
