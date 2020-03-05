@@ -133,10 +133,11 @@ class TopicModel extends BaseModel
      * @param $values
      * @param int $limit
      * @param string $order
+     * @param string $database
      * @return mixed
      */
-    public function customList($fileds, $values, $limit = 0, $order = 'lastdotime')
+    public function customList($fileds, $values, $limit = 0, $order = 'lastdotime', $database = 'database')
     {
-        return $this->dal['zt']->getCustomList($fileds, $values, $limit, $order);
+        return $this->dal['zt']->getCustomList($fileds, $values, $limit, $order, $database);
     }
 }

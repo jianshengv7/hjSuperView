@@ -172,13 +172,14 @@ class Topic extends Base
      * @param $order
      * @return array|bool
      */
-    public function getCustomList($fileds, $values, $limit, $order)
+    public function getCustomList($fileds, $values, $limit, $order, $database)
     {
         $params = [
             'fileds'  => $fileds,
             'values' => $values,
             'limit' => $limit,
-            'order' => $order
+            'order' => $order,
+            'database' => $database,
         ];
         return $this->getData('customList', $params);
     }
