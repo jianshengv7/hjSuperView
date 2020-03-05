@@ -16,13 +16,14 @@ class Mini extends Base
      * @param $order
      * @return array|bool
      */
-    public function getinfoList($field, $value, $limit, $order)
+    public function getinfoList($field, $value, $page, $limit, $order)
     {
         $params = [
             'limit' => intval($limit),
             'order' => $order,
             'field' => $field,
             'value' => $value,
+            'page' => $page
         ];
         return $this->getData('infoList', $params);
     }
