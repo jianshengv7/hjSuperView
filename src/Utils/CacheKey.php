@@ -41,11 +41,32 @@ class CacheKey
         $key = '';
         foreach ($depend as $k => $v) {
             if (!in_array($k, ['limit', 'isPic', 'classid'])) {
-                $v = !is_array($v) ? $v : implode(',', $v);
-                $key .= '::' . $v;
+                if(is_array($v)){
+                    if(static::is_assoc($v)){
+                        foreach($v as $ke => $val){
+                            $key .= '::'. $ke .'::'. $val;
+                        }
+                    }else{
+                        $key .= '::'. implode(',', $v);
+                    }
+                }else {
+                    $key .= '::' . $v;
+                }
             }
         }
         return $key;
+    }
+
+    /**
+     * 判断索引数组
+     *
+     * @param $array
+     * @return bool
+     */
+    public static function is_assoc($array)
+    {
+        $keys = array_keys($array);
+        return $keys !== array_keys($keys);
     }
 
     /**
