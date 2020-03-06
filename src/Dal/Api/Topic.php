@@ -212,7 +212,7 @@ class Topic extends Base
     public function getSoftByZtid($fields, $order)
     {
         $params = [
-            'fileds'  => $fields,
+            'fields'  => $fields,
             'order' => $order
         ];
         return $this->getData('softByZtid', $params);
