@@ -477,15 +477,16 @@ dnb 详情页专题定制方法 （通过软件id和classid获取列表）
 | id              | 软件id                                        | 是    | 0      | 
 
 
-#### 6.mathZt($fileds, $limit, $order)
+#### 6.mathZt($fileds, $limit, $order, $database)
 自定义参数请求（参数和值数量必须对应，仅专题可用）
 
 参数：
 | 参数名        | 描述                                         | 必填  | 默认     |
 | ------------- | -------------------------------------------- | :---: | :------: |
-| $fileds        | 参数 和值                                    | 是    | null     |
-| $limit         | 每页数据量,0为不限制                         | 否    | 0        |
-| $order         | 排序字段                                     | 否    | newstime |
+| fileds        | 参数 和值                                    | 是    | null     |
+| limit         | 每页数据量,0为不限制                         | 否    | 0        |
+| order         | 排序字段                                     | 否    | newstime |
+| database         | 数据库                                     | 否    | database |
 
 
 ### tag TAG模块
