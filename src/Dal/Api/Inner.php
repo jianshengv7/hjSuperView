@@ -65,7 +65,7 @@ class Inner extends Base
     public function getSoftInner($is_ztid, $order)
     {
         $params = [
-            'ztid' => $is_ztid,
+            'is_ztid' => $is_ztid,
             'order' => $order,
         ];
         return $this->getData('softInner', $params);
