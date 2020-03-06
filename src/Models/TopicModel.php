@@ -139,5 +139,18 @@ class TopicModel extends BaseModel
         return $this->dal['zt']->getMathZt($fileds, $limit, $order, $database);
     }
 
+    /**
+     * 自定参数请求（针对单个参数）
+     *
+     * @param $filed
+     * @param $value
+     * @param $limit
+     * @param $order
+     * @return mixed
+     */
+    public function math($filed = '', $value = '', $limit = 0, $order = 'addtime')
+    {
+        return $this->dal['zt']->getMath($filed, $value, $limit, $order);
+    }
 
 }

@@ -183,4 +183,23 @@ class Topic extends Base
         return $this->getData('mathZt', $params);
     }
 
+    /**
+     * 自定参数请求（针对单个参数）
+     *
+     * @param $fileds
+     * @param $value
+     * @param $limit
+     * @param $order
+     * @return array|bool
+     */
+    public function getMath($filed, $value, $limit, $order)
+    {
+        $params = [
+            'filed'  => $filed,
+            'value'  => $value,
+            'limit' => $limit,
+            'order' => $order,
+        ];
+        return $this->getData('math', $params);
+    }
 }
