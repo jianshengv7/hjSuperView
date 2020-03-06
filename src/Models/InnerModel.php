@@ -64,6 +64,6 @@ class InnerModel extends BaseModel
      */
     public function getHotSearchForClass($classid = 0, $ztid = 0, $limit = 0)
     {
-        return $this->dal['inner']->getSoftInner($classid, $ztid, $limit);
+        return $this->dal['inner']->getHotSearchForClass($classid, $ztid, $limit);
     }
 }
