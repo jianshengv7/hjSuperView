@@ -41,4 +41,16 @@ class InnerModel extends BaseModel
     {
         return $this->dal['inner']->getFriendLink($ztid);
     }
+
+    /**
+     * 获取内联列表
+     *
+     * @param int $is_ztid
+     * @param string $order
+     * @return mixed
+     */
+    public function softInner($is_ztid = 0, $order = 'sum')
+    {
+        return $this->dal['inner']->getSoftInner($is_ztid, $order);
+    }
 }

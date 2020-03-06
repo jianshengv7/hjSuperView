@@ -55,4 +55,19 @@ class Inner extends Base
         return $this->getData('friendLink', $params);
     }
 
+    /**
+     * 获取内联列表
+     *
+     * @param $is_ztid
+     * @param $order
+     * @return array|bool
+     */
+    public function getSoftInner($is_ztid, $order)
+    {
+        $params = [
+            'ztid' => $is_ztid,
+            'order' => $order,
+        ];
+        return $this->getData('softInner', $params);
+    }
 }
