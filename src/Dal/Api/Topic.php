@@ -192,7 +192,7 @@ class Topic extends Base
      * @param $order
      * @return array|bool
      */
-    public function getMath($filed, $value, $limit, $order)
+    public function getMatch($filed, $value, $limit, $order)
     {
         $params = [
             'filed'  => $filed,
@@ -200,6 +200,6 @@ class Topic extends Base
             'limit' => $limit,
             'order' => $order,
         ];
-        return $this->getData('math', $params);
+        return $this->getData('match', $params);
     }
 }

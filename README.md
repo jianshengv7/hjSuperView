@@ -488,7 +488,7 @@ dnb 详情页专题定制方法 （通过软件id和classid获取列表）
 | order         | 排序字段                                     | 否    | newstime |
 | database         | 数据库                                     | 否    | database |
 
-#### 7.math($filed, $value, $limit, $order)
+#### 7.match($filed, $value, $limit, $order)
 自定参数请求（针对单个参数）
 
 参数：

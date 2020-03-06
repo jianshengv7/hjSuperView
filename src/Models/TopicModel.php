@@ -148,9 +148,9 @@ class TopicModel extends BaseModel
      * @param $order
      * @return mixed
      */
-    public function math($filed = '', $value = '', $limit = 0, $order = 'addtime')
+    public function match($filed = '', $value = '', $limit = 0, $order = 'addtime')
     {
-        return $this->dal['zt']->getMath($filed, $value, $limit, $order);
+        return $this->dal['zt']->getMatch($filed, $value, $limit, $order);
     }
 
 }
