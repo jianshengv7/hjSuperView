@@ -127,7 +127,21 @@ class TopicModel extends BaseModel
     }
 
     /**
-     * 自定义参数请求（参数和值数量必须对应）
+     * 自定义参数请求（参数和值数量必须对应，where条件只针对关联表的）
+     *
+     * @param $files
+     * @param $values
+     * @param int $limit
+     * @param string $order
+     * @return mixed
+     */
+    public function mathZt($fileds, $values, $limit = 0 , $order = 'onclick')
+    {
+        return $this->dal['zt']->getMathZt($fileds, $values, $limit, $order);
+    }
+
+    /**
+     * 自定义参数请求（参数和值数量必须对应, where条件针对主表和关联表的）
      *
      * @param $fileds
      * @param $values
@@ -136,7 +150,7 @@ class TopicModel extends BaseModel
      * @param string $database
      * @return mixed
      */
-    public function customList($fileds, $values, $limit = 0, $order = 'lastdotime', $database = 'database')
+    public function customList($fileds, $values, $limit = 0, $order = 'onclick', $database = 'database')
     {
         return $this->dal['zt']->getCustomList($fileds, $values, $limit, $order, $database);
     }
