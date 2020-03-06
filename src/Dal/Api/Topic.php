@@ -167,17 +167,18 @@ class Topic extends Base
      *自定义参数请求（参数和值数量必须对应，仅专题可用）
      *
      * @param $fileds
-     * @param $values
      * @param $limit
      * @param $order
+     * @param $database
      * @return array|bool
      */
-    public function getMathZt($fileds, $limit, $order)
+    public function getMathZt($fileds, $limit, $order, $database)
     {
         $params = [
             'fileds'  => $fileds,
             'limit' => $limit,
             'order' => $order,
+            'database' => $database,
         ];
         return $this->getData('mathZt', $params);
     }
