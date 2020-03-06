@@ -164,7 +164,7 @@ class Topic extends Base
     }
 
     /**
-     *自定义参数请求（参数和值数量必须对应，where条件只针对关联表的）
+     *自定义参数请求（参数和值数量必须对应，仅专题可用）
      *
      * @param $fileds
      * @param $values
@@ -172,35 +172,14 @@ class Topic extends Base
      * @param $order
      * @return array|bool
      */
-    public function getMathZt($fileds, $values, $limit, $order)
+    public function getMathZt($fileds, $limit, $order)
     {
         $params = [
             'fileds'  => $fileds,
-            'values' => $values,
             'limit' => $limit,
             'order' => $order,
         ];
         return $this->getData('mathZt', $params);
     }
 
-    /**
-     * 自定义参数请求 （参数和值数量必须对应, where条件针对主表和关联表的）
-     *
-     * @param string $fileds 请求字段 多个参数以逗号分隔
-     * @param string $values 值   多个值以多个逗号分隔
-     * @param $limit
-     * @param $order
-     * @return array|bool
-     */
-    public function getCustomList($fileds, $values, $limit, $order, $database)
-    {
-        $params = [
-            'fileds'  => $fileds,
-            'values' => $values,
-            'limit' => $limit,
-            'order' => $order,
-            'database' => $database,
-        ];
-        return $this->getData('customList', $params);
-    }
 }
