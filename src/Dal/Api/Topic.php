@@ -195,7 +195,7 @@ class Topic extends Base
     public function getMatch($fileds, $limit, $order)
     {
         $params = [
-            'filed'  => $fileds,
+            'fileds'  => $fileds,
             'limit' => $limit,
             'order' => $order,
         ];
