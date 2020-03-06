@@ -529,6 +529,24 @@ class Content extends Base
     }
 
     /**
+     * 小编推荐
+     *
+     * @param $softid
+     * @param $classid
+     * @param $limit
+     * @return array|bool
+     */
+    public function getTuijian($softid, $classid, $limit)
+    {
+        $params = [
+            'softid'   => $softid,
+            'classid'   => $classid,
+            'limit'   => intval($limit),
+        ];
+        return $this->getData('tuijian', $params);
+    }
+
+    /**
      * 自定义参数请求 （参数和值数量必须对应）
      *
      * @param string $fileds 请求字段 多个参数以逗号分隔

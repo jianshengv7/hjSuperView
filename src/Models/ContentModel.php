@@ -402,6 +402,18 @@ class ContentModel extends BaseModel
     }
 
     /**
+     * 小编推荐
+     *
+     * @param $softid
+     * @param $classid
+     * @return mixed
+     */
+    public function tuijian($softid = 0, $classid = 0, $limit = 3)
+    {
+        return  $this->dal()->getTuijian($softid, $classid, $limit);
+    }
+
+    /**
      * 自定义参数请求（参数和值数量必须对应）
      *
      * @param $fileds
