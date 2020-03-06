@@ -477,27 +477,45 @@ dnb 详情页专题定制方法 （通过软件id和classid获取列表）
 | id              | 软件id                                        | 是    | 0      | 
 
 
-#### 6.mathZt($fileds, $limit, $order, $database)
+#### 6.mathZt($fields, $limit, $order, $database)
 自定义参数请求（参数和值数量必须对应，仅专题可用）
 
 参数：
 | 参数名        | 描述                                         | 必填  | 默认     |
 | ------------- | -------------------------------------------- | :---: | :------: |
-| fileds        | 参数 和值                                    | 是    | null     |
+| fields        | 参数 和值                                    | 是    | null     |
 | limit         | 每页数据量,0为不限制                         | 否    | 0        |
 | order         | 排序字段                                     | 否    | newstime |
 | database         | 数据库                                     | 否    | database |
 
-#### 7.match($fileds, $limit, $order)
+#### 7.match($fields, $limit, $order)
 自定参数请求（不需要关联查询）
 
 参数：
 | 参数名        | 描述                                         | 必填  | 默认     |
 | ------------- | -------------------------------------------- | :---: | :------: |
-| fileds        | 参数                                | 是    | null     |
+| fields        | 参数                                | 是    | null     |
 | limit         | 每页数据量,0为不限制                         | 否    | 0        |
 | order         | 排序字段                                     | 否    | newstime |
 
+#### 8.softByZtid($fields, $order)
+通过ztid获取soft和ztinfo信息(关联查询)
+
+参数：
+| 参数名        | 描述                                         | 必填  | 默认     |
+| ------------- | -------------------------------------------- | :---: | :------: |
+| fields        | 参数                                | 是    | null     |
+| order         | 排序                         | 否    | addtime        |
+
+#### 9.ztCommon（$fields, $limit, $group）
+专题详情页评论 (关联查询)
+
+参数：
+| 参数名        | 描述                                         | 必填  | 默认     |
+| ------------- | -------------------------------------------- | :---: | :------: |
+| fields        | 参数                                | 是    | null     |
+| limit         | 排序                                | 否    | null        |
+| group         | 排序                                | 是    | null        |
 
 ### tag TAG模块
 
@@ -586,11 +604,22 @@ dnb 详情页专题定制方法 （通过软件id和classid获取列表）
 
 #### 4.softInner($is_ztid, $order)
 获取内联列表
+
 参数:
 | 参数名          | 描述                                         | 必填  | 默认     |
 | --------------- | -------------------------------------------- | :---: | :------: |
 | is_ztid         |  $is_ztid                                      | 是    | 0     |
 | order         |  排序                                      | 否    | sum    |
+
+#### 5. getHotSearchForClass($classid, $ztid, $limit)
+正文内联词
+
+参数:
+| 参数名          | 描述                                         | 必填  | 默认     |
+| --------------- | -------------------------------------------- | :---: | :------: |
+| classid         |  分类id                                      | 是    | 0     |
+| ztid         |  ztid                                   | 否    |   0  |
+| limit         |   每页数据量, 需要大于1,0为不限制                                   | 否    | sum    |
 
 ###  Mini 小程序
 #### 1.infoList($field, $value, $limit, $order)

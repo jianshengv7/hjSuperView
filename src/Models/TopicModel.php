@@ -134,9 +134,9 @@ class TopicModel extends BaseModel
      * @param string $order
      * @return mixed
      */
-    public function mathZt($fileds, $limit = 0 , $order = 'onclick', $database = 'database')
+    public function mathZt($fields, $limit = 0 , $order = 'onclick', $database = 'database')
     {
-        return $this->dal['zt']->getMathZt($fileds, $limit, $order, $database);
+        return $this->dal['zt']->getMathZt($fields, $limit, $order, $database);
     }
 
     /**
@@ -148,9 +148,33 @@ class TopicModel extends BaseModel
      * @param $order
      * @return mixed
      */
-    public function match($fileds = '', $limit = 0, $order = 'addtime')
+    public function match($fields = '', $limit = 0, $order = 'addtime')
     {
-        return $this->dal['zt']->getMatch($fileds, $limit, $order);
+        return $this->dal['zt']->getMatch($fields, $limit, $order);
     }
 
+    /**
+     * 通过ztid获取soft和ztinfo信息(关联查询)
+     *
+     * @param string $fields
+     * @param string $order
+     * @return mixed
+     */
+    public function softByZtid($fields = '', $order = 'addtime')
+    {
+        return $this->dal['zt']->getSoftByZtid($fields, $order);
+    }
+
+    /**
+     * 专题详情页评论 (关联查询)
+     *
+     * @param $fields
+     * @param $limit
+     * @param string $group
+     * @return mixed
+     */
+    public function ztCommon($ids, $limit , $group = '')
+    {
+        return $this->dal['zt']->getztCommon($ids, $limit, $group);
+    }
 }

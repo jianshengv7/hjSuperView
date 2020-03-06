@@ -53,4 +53,17 @@ class InnerModel extends BaseModel
     {
         return $this->dal['inner']->getSoftInner($is_ztid, $order);
     }
+
+    /**
+     * 正文内联词
+     *
+     * @param int $classid
+     * @param int $ztid
+     * @param int $limit
+     * @return mixed
+     */
+    public function getHotSearchForClass($classid = 0, $ztid = 0, $limit = 0)
+    {
+        return $this->dal['inner']->getSoftInner($classid, $ztid, $limit);
+    }
 }

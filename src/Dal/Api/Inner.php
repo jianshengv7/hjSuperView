@@ -70,4 +70,23 @@ class Inner extends Base
         ];
         return $this->getData('softInner', $params);
     }
+
+    /**
+     * 正文内联词
+     *
+     * @param $classid
+     * @param $ztid
+     * @param $limit
+     * @return array|bool
+     */
+    public function getHotSearchForClass($classid, $ztid, $limit)
+    {
+        $params = [
+            'classid' => $classid,
+            'ztid' => $ztid,
+            'limit' => $limit,
+        ];
+        return $this->getData('getHotSearchForClass', $params);
+
+    }
 }

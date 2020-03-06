@@ -172,10 +172,10 @@ class Topic extends Base
      * @param $database
      * @return array|bool
      */
-    public function getMathZt($fileds, $limit, $order, $database)
+    public function getMathZt($fields, $limit, $order, $database)
     {
         $params = [
-            'fileds'  => $fileds,
+            'fields'  => $fields,
             'limit' => $limit,
             'order' => $order,
             'database' => $database,
@@ -192,13 +192,47 @@ class Topic extends Base
      * @param $order
      * @return array|bool
      */
-    public function getMatch($fileds, $limit, $order)
+    public function getMatch($fields, $limit, $order)
     {
         $params = [
-            'fileds'  => $fileds,
+            'fields'  => $fields,
             'limit' => $limit,
             'order' => $order,
         ];
         return $this->getData('match', $params);
+    }
+
+    /**
+     * 通过ztid获取soft和ztinfo信息(关联查询)
+     *
+     * @param $fields
+     * @param $order
+     * @return array|bool
+     */
+    public function getSoftByZtid($fields, $order)
+    {
+        $params = [
+            'fileds'  => $fields,
+            'order' => $order
+        ];
+        return $this->getData('softByZtid', $params);
+    }
+
+    /**
+     * 专题详情页评论（关联查询）
+     *
+     * @param $fields
+     * @param $limit
+     * @param $group
+     * @return array|bool
+     */
+    public function getztCommon($ids, $limit, $group)
+    {
+        $params = [
+            'ids'  => $ids,
+            'limit' => $limit,
+            'group' => $group
+        ];
+        return $this->getData('ztCommon', $params);
     }
 }
