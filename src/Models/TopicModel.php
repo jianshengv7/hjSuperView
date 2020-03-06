@@ -177,4 +177,15 @@ class TopicModel extends BaseModel
     {
         return $this->dal['zt']->getztCommon($ids, $limit, $group);
     }
+
+    /**
+     *获取多个ztid数据
+     *
+     * @param array $ztid
+     * @return mixed
+     */
+    public function inZtid($ztid = [])
+    {
+        return $this->dal['zt']->inZtid($ztid);
+    }
 }

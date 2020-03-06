@@ -235,4 +235,19 @@ class Topic extends Base
         ];
         return $this->getData('ztCommon', $params);
     }
+
+    /**
+     * 获取多个ztid数据
+     *
+     * @param $ztid
+     * @return array|bool
+     */
+    public function inZtid($ztid)
+    {
+        $params = [
+            'ztid'  => $ztid,
+        ];
+        return $this->getData('inZtid', $params);
+
+    }
 }
