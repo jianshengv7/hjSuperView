@@ -140,7 +140,7 @@ class TopicModel extends BaseModel
     }
 
     /**
-     * 自定参数请求（针对单个参数）
+     * 自定参数请求（不需要使用关联查询）
      *
      * @param $filed
      * @param $value
@@ -148,9 +148,9 @@ class TopicModel extends BaseModel
      * @param $order
      * @return mixed
      */
-    public function match($filed = '', $value = '', $limit = 0, $order = 'addtime')
+    public function match($fileds = '', $limit = 0, $order = 'addtime')
     {
-        return $this->dal['zt']->getMatch($filed, $value, $limit, $order);
+        return $this->dal['zt']->getMatch($fileds, $limit, $order);
     }
 
 }

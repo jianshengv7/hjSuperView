@@ -184,7 +184,7 @@ class Topic extends Base
     }
 
     /**
-     * 自定参数请求（针对单个参数）
+     * 自定参数请求（不需要关联查询）
      *
      * @param $fileds
      * @param $value
@@ -192,11 +192,10 @@ class Topic extends Base
      * @param $order
      * @return array|bool
      */
-    public function getMatch($filed, $value, $limit, $order)
+    public function getMatch($fileds, $limit, $order)
     {
         $params = [
-            'filed'  => $filed,
-            'value'  => $value,
+            'filed'  => $fileds,
             'limit' => $limit,
             'order' => $order,
         ];
