@@ -188,4 +188,15 @@ class TopicModel extends BaseModel
     {
         return $this->dal['zt']->inZtid($ztid);
     }
+
+    /**
+     * ztinfo表通过ztid获取id
+     *
+     * @param $ztid
+     * @return mixed
+     */
+    public function getIdByZid($ztid = 0)
+    {
+        return $this->dal['zt']->getIdByZid($ztid);
+    }
 }

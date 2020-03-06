@@ -250,4 +250,18 @@ class Topic extends Base
         return $this->getData('inZtid', $params);
 
     }
+
+    /**
+     * ztinfo表通过ztid获取id
+     *
+     * @param $ztid
+     * @return array|bool
+     */
+    public function getIdByZid($ztid)
+    {
+        $params = [
+            'ztid'  => $ztid,
+        ];
+        return $this->getData('getIdByZid', $params);
+    }
 }
