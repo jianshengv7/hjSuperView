@@ -172,7 +172,7 @@ class Topic extends Base
      * @param $database
      * @return array|bool
      */
-    public function getMathZt($fields, $limit, $order, $database)
+    public function getMatchZt($fields, $limit, $order, $database)
     {
         $params = [
             'fields'  => $fields,

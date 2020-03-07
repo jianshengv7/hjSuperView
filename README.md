@@ -477,7 +477,7 @@ dnb 详情页专题定制方法 （通过软件id和classid获取列表）
 | id              | 软件id                                        | 是    | 0      | 
 
 
-#### 6.mathZt($fields, $limit, $order, $database)
+#### 6.matchZt($fields, $limit, $order, $database)
 自定义参数请求（参数和值数量必须对应，仅专题可用）
 
 参数：

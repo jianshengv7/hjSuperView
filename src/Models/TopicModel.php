@@ -134,9 +134,9 @@ class TopicModel extends BaseModel
      * @param string $order
      * @return mixed
      */
-    public function mathZt($fields, $limit = 0 , $order = 'onclick', $database = 'database')
+    public function matchZt($fields, $limit = 0 , $order = 'onclick', $database = 'database')
     {
-        return $this->dal['zt']->getMathZt($fields, $limit, $order, $database);
+        return $this->dal['zt']->getMatchZt($fields, $limit, $order, $database);
     }
 
     /**
