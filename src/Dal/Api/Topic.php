@@ -264,4 +264,40 @@ class Topic extends Base
         ];
         return $this->getData('getIdByZid', $params);
     }
+
+    /**
+     * ztadd & zt表关联信息
+     *
+     * @param $fields
+     * @param $limit
+     * @param $order
+     * @return array|bool
+     */
+    public function ztaddJoinzt($fields, $limit, $order)
+    {
+        $params = [
+            'fields'  => $fields,
+            'limit' => $limit,
+            'order' => $order,
+        ];
+        return $this->getData('ztaddJoinzt', $params);
+    }
+
+    /**
+     * zt表 ztid between 2个值之间的列表
+     *
+     * @param $min
+     * @param $max
+     * @param $group
+     * @return array|bool
+     */
+    public function ztBetween($min, $max, $group)
+    {
+        $params = [
+            'min'  => $min,
+            'max' => $max,
+            'group' => $group,
+        ];
+        return $this->getData('ztBetween', $params);
+    }
 }

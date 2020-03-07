@@ -199,4 +199,30 @@ class TopicModel extends BaseModel
     {
         return $this->dal['zt']->getIdByZid($ztid);
     }
+
+    /**
+     * ztadd & zt表关联信息
+     *
+     * @param string $fields
+     * @param int $limit
+     * @param string $order
+     * @return mixed
+     */
+    public function ztaddJoinzt($fields = '', $limit = 0, $order = 'onclick')
+    {
+        return $this->dal['zt']->ztaddJoinzt($fields, $limit, $order);
+    }
+
+    /**
+     * zt表 ztid between 2个值之间的列表
+     *
+     * @param int $min
+     * @param int $max
+     * @param string $group
+     * @return mixed
+     */
+    public function ztBetween($min = 0, $max = 0, $group = 'zcid')
+    {
+        return $this->dal['zt']->ztBetween($min, $max, $group);
+    }
 }
