@@ -555,15 +555,13 @@ class Content extends Base
      * @param $order
      * @return array|bool
      */
-    public function getCustomList($fileds, $values, $limit, $order)
+    public function getCustomList($fileds, $limit, $order)
     {
         $params = [
             'fileds'  => $fileds,
-            'values' => $values,
             'limit' => $limit,
             'order' => $order
         ];
         return $this->getData('customList', $params);
     }
-
 }

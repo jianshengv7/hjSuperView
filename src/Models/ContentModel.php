@@ -422,9 +422,9 @@ class ContentModel extends BaseModel
      * @param string $order
      * @return mixed
      */
-    public function customList($fileds, $values, $limit = 0, $order = 'lastdotime')
+    public function customList($fileds, $limit = 0, $order = 'lastdotime')
     {
-        return $this->dal()->getCustomList($fileds, $values, $limit, $order);
+        return $this->dal()->getCustomList($fileds, $limit, $order);
     }
 
 }
