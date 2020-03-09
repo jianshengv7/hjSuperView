@@ -224,4 +224,17 @@ class TopicModel extends BaseModel
     {
         return $this->dal['zt']->ztBetween($min, $max);
     }
+
+    /**
+     * 专题表ztid notin
+     *
+     * @param array $ztids
+     * @param int $limit
+     * @param string $order
+     * @return mixed
+     */
+    public function ztidNotIn($ztids = [], $limit = 0, $order = 'addtime')
+    {
+        return $this->dal['zt']->ztidNotIn($ztids, $limit, $order);
+    }
 }

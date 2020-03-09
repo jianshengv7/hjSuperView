@@ -468,6 +468,7 @@ class ContentModel extends BaseModel
      * 获取其他版本
      *
      * @param $softid
+     * @return mixed
      */
     public function otherSoft($softid)
     {

@@ -298,4 +298,23 @@ class Topic extends Base
         ];
         return $this->getData('ztBetween', $params);
     }
+
+    /**
+     * 专题表ztid notin
+     *
+     * @param $ztids
+     * @param $limit
+     * @param $order
+     * @return array|bool
+     */
+    public function ztidNotIn($ztids, $limit, $order)
+    {
+        $params = [
+            'ztids'  => $ztids,
+            'limit' => $limit,
+            'order' => $order,
+        ];
+        return $this->getData('ztidNotIn', $params);
+
+    }
 }
