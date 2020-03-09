@@ -30,6 +30,24 @@ class CategoryModel extends BaseModel
     }
 
     /**
+     * 获取顶级分类
+     *
+     * @param int $classid
+     * @return array|bool
+     */
+    public function finalFather($classid = 0)
+    {
+        if (empty($classid)) {
+            return false;
+        }
+        $class_info = $this->info($classid);
+        if($class_info['bclassid'] != 0){
+           return $this->finalFather($class_info['bclassid']);
+        }
+        return $class_info;
+    }
+
+    /**
      * Get category detail.
      *
      * @param  int  $classid
