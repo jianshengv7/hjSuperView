@@ -463,4 +463,14 @@ class ContentModel extends BaseModel
     {
         return $this->dal()->getPl($softid, $checked, $limit);
     }
+
+    /**
+     * 获取其他版本
+     *
+     * @param $softid
+     */
+    public function otherSoft($softid)
+    {
+        return $this->dal()->otherSoft($softid);
+    }
 }

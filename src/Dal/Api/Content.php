@@ -614,4 +614,18 @@ class Content extends Base
         ];
         return $this->getData('getPl', $params);
     }
+
+    /**
+     * 获取其他版本
+     *
+     * @param $softid
+     * @return array|bool
+     */
+    public function otherSoft($softid)
+    {
+        $params = [
+            'softid'  => $softid,
+        ];
+        return $this->getData('otherSoft', $params);
+    }
 }
