@@ -560,7 +560,7 @@ ztinfo表通过ztid获取id
 | ------------- | -------------------------------------------- | :---: | :------: |
 | ztid        | ztid                               | 是    | 0     |
 
-#### 12.ztBetween($min, $max, $group)
+#### 12.ztBetween($min, $max)
 zt表 ztid between 2个值之间的列表
 
 参数：
@@ -568,7 +568,6 @@ zt表 ztid between 2个值之间的列表
 | ------------- | -------------------------------------------- | :---: | :------: |
 | min        | 范围                               | 是    | 0     |
 | max        | 范围                               | 是    | 0     |
-| group        | 分组                               | 是    | ztid    |
 
 #### 13.ztaddJoinzt($fields, $limit, $order)
 ztadd & zt表关联信息

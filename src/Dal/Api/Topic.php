@@ -288,15 +288,13 @@ class Topic extends Base
      *
      * @param $min
      * @param $max
-     * @param $group
      * @return array|bool
      */
-    public function ztBetween($min, $max, $group)
+    public function ztBetween($min, $max)
     {
         $params = [
             'min'  => $min,
             'max' => $max,
-            'group' => $group,
         ];
         return $this->getData('ztBetween', $params);
     }

@@ -218,11 +218,10 @@ class TopicModel extends BaseModel
      *
      * @param int $min
      * @param int $max
-     * @param string $group
      * @return mixed
      */
-    public function ztBetween($min = 0, $max = 0, $group = 'zcid')
+    public function ztBetween($min = 0, $max = 0)
     {
-        return $this->dal['zt']->ztBetween($min, $max, $group);
+        return $this->dal['zt']->ztBetween($min, $max);
     }
 }
