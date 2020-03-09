@@ -564,4 +564,22 @@ class Content extends Base
         ];
         return $this->getData('customList', $params);
     }
+
+    /**
+     * dnb 列表 （id not in&operator_id in）
+     *
+     * @param $ids
+     * @param $cid
+     * @param $order
+     * @return array|bool
+     */
+    public function allGameByIdAndCid($ids, $cid, $order)
+    {
+        $params = [
+            'ids'  => $ids,
+            'cid' => $cid,
+            'order' => $order
+        ];
+        return $this->getData('allGameByIdAndCid', $params);
+    }
 }

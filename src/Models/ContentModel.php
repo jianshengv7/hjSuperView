@@ -427,4 +427,17 @@ class ContentModel extends BaseModel
         return $this->dal()->getCustomList($fields, $limit, $order);
     }
 
+    /**
+     * dnb 列表 （id not in&operator_id in）
+     *
+     * @param array $ids
+     * @param int $cid
+     * @param string $order
+     * @return mixed
+     */
+    public function allGameByIdAndCid($ids, $cid = 0, $order = 'onclick')
+    {
+        return $this->dal()->allGameByIdAndCid($ids, $cid, $order);
+    }
+
 }
