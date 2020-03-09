@@ -606,15 +606,14 @@ ztadd & zt表关联信息
 
 ### utils 工具模块
 
-#### 1. friendLinks($type, $classid, $limit)
-获取专题列表
+#### 1. relationWord($softid)
+获取软件相关词
 
 参数:
 | 参数名          | 描述                                         | 必填  | 默认     |
 | --------------- | -------------------------------------------- | :---: | :------: |
-| type            | 是否推荐, 0不限, 1图片, 2文字                | 否    | 0        |
-| classid         | 分类ID                                       | 否    | 0        |
-| limit           | 数据量  ,0为不限制                           | 否    | 0        |
+| softid            | 软件id              | 否    | 0        |
+
 
 #### 2. renderPage($route, $total, $limit, $page, $simple, $options)
 获取专题列表
