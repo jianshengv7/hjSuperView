@@ -582,4 +582,22 @@ class Content extends Base
         ];
         return $this->getData('allGameByIdAndCid', $params);
     }
+
+    /**
+     * 获取评论
+     *
+     * @param $softid
+     * @param $checked
+     * @param $limit
+     * @return array|bool
+     */
+    public function getPl($softid, $checked, $limit)
+    {
+        $params = [
+            'softid'  => $softid,
+            'checked' => $checked,
+            'limit' => $limit
+        ];
+        return $this->getData('getPl', $params);
+    }
 }

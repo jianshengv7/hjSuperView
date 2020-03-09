@@ -440,4 +440,16 @@ class ContentModel extends BaseModel
         return $this->dal()->allGameByIdAndCid($ids, $cid, $order);
     }
 
+    /**
+     * 获取评论
+     *
+     * @param int $softid
+     * @param int $checked
+     * @param int $limit
+     * @return mixed
+     */
+    public function getPl($softid = 0, $checked = 0,  $limit = 0)
+    {
+        return $this->dal()->getPl($softid, $checked, $limit);
+    }
 }

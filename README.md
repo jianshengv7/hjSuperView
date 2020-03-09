@@ -428,6 +428,16 @@ dnb 列表 （id not in&operator_id in）
 | cid         | cid                        | 否    | 0        |
 | order         | 排序字段                                     | 否    | onclick |
 
+#### 26.getPl($softid, $checked, $limit)
+获取评论
+
+参数：
+| 参数名        | 描述                                         | 必填  | 默认     |
+| ------------- | -------------------------------------------- | :---: | :------: |
+| softid        | 软件id                                | 是    | null     |
+| checked         | checked                        | 否    | 0        |
+| limit         | 每页数据量,0为不限制                                     | 否    | 0 |
+
 
 ### zt 专题模块
 
