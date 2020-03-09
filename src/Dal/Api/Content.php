@@ -451,6 +451,20 @@ class Content extends Base
     }
 
     /**
+     * 通过path获取厂商信息
+     *
+     * @param $company_path
+     * @return array|bool
+     */
+    public function companyPath($company_path)
+    {
+        $params = [
+            'company_path' => $company_path,
+        ];
+        return $this->getData('companyPath', $params);
+    }
+
+    /**
      * 获取厂商列表（仅限厂商使用）
      *
      * @param $classid

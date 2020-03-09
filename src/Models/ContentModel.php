@@ -360,6 +360,17 @@ class ContentModel extends BaseModel
     }
 
     /**
+     * 通过path获取厂商信息
+     *
+     * @param $company_path
+     * @return mixed
+     */
+    public function companyPath($company_path = '')
+    {
+        return  $this->dal()->companyPath($company_path);
+    }
+
+    /**
      * 攻略列表
      *
      * @param int $game_id

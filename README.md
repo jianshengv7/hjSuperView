@@ -438,6 +438,13 @@ dnb 列表 （id not in&operator_id in）
 | checked         | checked                        | 否    | 0        |
 | limit         | 每页数据量,0为不限制                                     | 否    | 0 |
 
+#### 27.companyPath($company_path)
+通过path获取厂商信息
+
+参数：
+| 参数名        | 描述                                         | 必填  | 默认     |
+| ------------- | -------------------------------------------- | :---: | :------: |
+| company_path        | company_path                                | 是    | ''     |
 
 ### zt 专题模块
 
