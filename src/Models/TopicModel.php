@@ -210,7 +210,8 @@ class TopicModel extends BaseModel
      */
     public function ztaddJoinzt($fields = '', $limit = 0, $order = 'onclick')
     {
-        return $this->dal['zt']->ztaddJoinzt($fields, $limit, $order);
+        $page = $this->getCurrentPage();
+        return $this->dal['zt']->ztaddJoinzt($fields, $limit, $order, $page);
     }
 
     /**

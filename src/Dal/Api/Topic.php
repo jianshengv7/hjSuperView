@@ -273,12 +273,13 @@ class Topic extends Base
      * @param $order
      * @return array|bool
      */
-    public function ztaddJoinzt($fields, $limit, $order)
+    public function ztaddJoinzt($fields, $limit, $order, $page)
     {
         $params = [
             'fields'  => $fields,
             'limit' => $limit,
             'order' => $order,
+            'page' => $page
         ];
         return $this->getData('ztaddJoinzt', $params);
     }
