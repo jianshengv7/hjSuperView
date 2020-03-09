@@ -44,7 +44,7 @@ class CacheKey
                 if(is_array($v)){
                     if(static::is_assoc($v)){
                         foreach($v as $ke => $val){
-                            $key .= '::'. $ke .'::'. is_array($val) ? implode(',', $val) : $val;
+                            $key .= '::'. $ke .'::'. (is_array($val) ? implode(',', $val) : $val);
                         }
                     }else{
                         $key .= '::'. implode(',', $v);
