@@ -408,7 +408,7 @@ SuperView::get('soft')->page(false)->recent(); // 默认为第一页, 作用相�
 | $limit         | 每页数据量,0为不限制                         | 否    | 0        |
 
 
-#### 24.customList($fileds, $limit, $order)
+#### 24.customList($fields, $limit, $order)
 自定义参数请求（多个参数以逗号分隔，多个值以逗号分隔，参数和值数量必须对应）
 
 参数：
