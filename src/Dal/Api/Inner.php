@@ -42,15 +42,29 @@ class Inner extends Base
     }
 
     /**
+     * 专题友链
+     *
+     * @param $ztid
+     * @return array|bool
+     */
+    public function ztFriendLink($ztid)
+    {
+        $params = [
+            'ztid' => $ztid,
+        ];
+        return $this->getData('ztFriendLink', $params);
+    }
+
+    /**
      * 友链
      *
      * @param $ztid
      * @return array|bool
      */
-    public function getFriendLink($ztid)
+    public function friendLink($webid)
     {
         $params = [
-            'ztid' => $ztid,
+            'webid' => $webid,
         ];
         return $this->getData('friendLink', $params);
     }

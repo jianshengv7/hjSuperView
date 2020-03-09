@@ -32,14 +32,25 @@ class InnerModel extends BaseModel
     }
 
     /**
+     * 专题友链
+     *
+     * @param $ztid
+     * @return mixed
+     */
+    public function ztFriendLink($ztid = 0)
+    {
+        return $this->dal['inner']->ztFriendLink($ztid);
+    }
+
+    /**
      * 友链
      *
      * @param $ztid
      * @return mixed
      */
-    public function friendLink($ztid = 0)
+    public function friendLink($webid)
     {
-        return $this->dal['inner']->getFriendLink($ztid);
+        return $this->dal['inner']->friendLink($webid);
     }
 
     /**
