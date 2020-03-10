@@ -616,6 +616,22 @@ class Content extends Base
     }
 
     /**
+     * 获取所有评论
+     *
+     * @param $id
+     * @param $order
+     * @return array|bool
+     */
+    public function getAllPl($id, $order)
+    {
+        $params = [
+            'id'  => $id,
+            'order' => $order,
+        ];
+        return $this->getData('getAllPl', $params);
+    }
+
+    /**
      * 获取其他版本
      *
      * @param $softid

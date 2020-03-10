@@ -465,6 +465,18 @@ class ContentModel extends BaseModel
     }
 
     /**
+     * 获取所有评论
+     *
+     * @param $id
+     * @param string $order
+     * @return mixed
+     */
+    public function getAllPl($id, $order = 'saytime')
+    {
+        return $this->dal()->getAllPl($id, $order);
+    }
+
+    /**
      * 获取其他版本
      *
      * @param $softid
