@@ -569,12 +569,13 @@ class Content extends Base
      * @param $order
      * @return array|bool
      */
-    public function getCustomList($fields, $limit, $order)
+    public function getCustomList($fields, $limit, $order, $page)
     {
         $params = [
             'fields'  => $fields,
             'limit' => $limit,
-            'order' => $order
+            'order' => $order,
+            'page' => $page
         ];
         return $this->getData('customList', $params);
     }

@@ -435,7 +435,8 @@ class ContentModel extends BaseModel
      */
     public function customList($fields, $limit = 0, $order = 'lastdotime')
     {
-        return $this->dal()->getCustomList($fields, $limit, $order);
+        $page = $this->getCurrentPage();
+        return $this->dal()->getCustomList($fields, $limit, $order, $page);
     }
 
     /**
