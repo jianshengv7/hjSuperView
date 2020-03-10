@@ -17,7 +17,6 @@ return [
         'content' => SuperView\Models\ContentModel::class,
         'category' => SuperView\Models\CategoryModel::class,
         'zt' => SuperView\Models\TopicModel::class,
-        'tag' => SuperView\Models\TagModel::class,
         'utils' => SuperView\Models\UtilsModel::class,
         'chip' => SuperView\Models\ChipModel::class,
         'banner' => SuperView\Models\BannerModel::class,
@@ -26,13 +25,13 @@ return [
         'inner' => SuperView\Models\InnerModel::class,
         'foot' => SuperView\Models\InnerModel::class,
         'mini' => SuperView\Models\MiniModel::class,
+        'other' =>  SuperView\Models\OtherModelsModel::class,
     ],
 
     'dals' => [
         'content' => SuperView\Dal\Api\Content::class,
         'category' => SuperView\Dal\Api\Category::class,
         'zt' => SuperView\Dal\Api\Topic::class,
-        'tag' => SuperView\Dal\Api\Tag::class,
         'utils' => SuperView\Dal\Api\Utils::class,
         'chip' => SuperView\Dal\Api\Chip::class,
         'banner' => SuperView\Dal\Api\Banner::class,
@@ -41,6 +40,7 @@ return [
         'inner' => SuperView\Dal\Api\Inner::class,
         'foot' =>  SuperView\Dal\Api\Inner::class,
         'mini' =>  SuperView\Dal\Api\Mini::class,
+        'other' =>  SuperView\Dal\Api\Other::class,
     ],
 
     'pagination' => [
