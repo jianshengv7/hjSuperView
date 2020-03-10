@@ -88,7 +88,7 @@ class InnerModel extends BaseModel
      * @param int $rand
      * @return mixed
      */
-    public function match($fields = [], $vary = [], $limit = 0, $order = 'add', $rand = 0)
+    public function match($fields = [], $vary = [], $limit = 0, $order = 'sum', $rand = 0)
     {
         return $this->dal['inner']->match($fields, $vary, $limit, $order, $rand);
     }

@@ -738,7 +738,7 @@ ztadd & zt表关联信息
 | field         |  字段名                                     | 是    | ''     |
 | value         |  值                                        | 是    | 0    |
 | limit        | 每页数据量, 需要大于1,0为不限制          | 是    | null    |
-| order         |  排序                                   | 否   | lastdotime    |
+| order         |  排序                                   | 否   | sum    |
 
 
 ## Change log
