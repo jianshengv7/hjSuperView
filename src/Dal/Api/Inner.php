@@ -103,4 +103,26 @@ class Inner extends Base
         return $this->getData('getHotSearchForClass', $params);
 
     }
+
+    /**
+     * 自定义内联表查询
+     *
+     * @param $fields
+     * @param $vary
+     * @param $limit
+     * @param $order
+     * @param $rand
+     * @return array|bool
+     */
+    public function match($fields, $vary, $limit, $order, $rand)
+    {
+        $params = [
+            'fields' => $fields,
+            'vary' => $vary,
+            'limit' => $limit,
+            'order' => $order,
+            'rand' => $rand,
+        ];
+        return $this->getData('match', $params);
+    }
 }

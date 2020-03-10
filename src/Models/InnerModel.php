@@ -77,4 +77,19 @@ class InnerModel extends BaseModel
     {
         return $this->dal['inner']->getHotSearchForClass($classid, $ztid, $limit);
     }
+
+    /**
+     * 自定义内联表查询
+     *
+     * @param array $fields
+     * @param array $vary
+     * @param int $limit
+     * @param string $order
+     * @param int $rand
+     * @return mixed
+     */
+    public function match($fields = [], $vary = [], $limit = 0, $order = 'add', $rand = 0)
+    {
+        return $this->dal['inner']->match($fields, $vary, $limit, $order, $rand);
+    }
 }
