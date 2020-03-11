@@ -25,7 +25,7 @@ return [
         'inner' => SuperView\Models\InnerModel::class,
         'foot' => SuperView\Models\InnerModel::class,
         'mini' => SuperView\Models\MiniModel::class,
-        'other' =>  SuperView\Models\OtherModelsModel::class,
+        'other' =>  SuperView\Models\OtherModel::class,
     ],
 
     'dals' => [
