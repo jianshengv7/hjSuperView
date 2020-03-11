@@ -487,4 +487,18 @@ class ContentModel extends BaseModel
     {
         return $this->dal()->otherSoft($softid);
     }
+
+    /**
+     * 存在不等于的组合查询
+     *
+     * @param array $fields
+     * @param array $vary
+     * @param int $limit
+     * @param string $order
+     * @return mixed
+     */
+    public function customVary($fields = [], $vary = [], $limit = 0, $order = 'weekip')
+    {
+        return $this->dal['inner']->customVary($fields, $vary, $limit, $order);
+    }
 }

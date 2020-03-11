@@ -645,4 +645,24 @@ class Content extends Base
         ];
         return $this->getData('otherSoft', $params);
     }
+
+    /**
+     * 存在不等于的组合查询
+     *
+     * @param $fields
+     * @param $vary
+     * @param $limit
+     * @param $order
+     * @return array|bool
+     */
+    public function customVary($fields, $vary, $limit, $order)
+    {
+        $params = [
+            'fields'  => $fields,
+            'vary'  => $vary,
+            'limit'  => $limit,
+            'order'  => $order,
+        ];
+        return $this->getData('customVary', $params);
+    }
 }

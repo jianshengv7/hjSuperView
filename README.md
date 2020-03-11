@@ -470,6 +470,17 @@ dnb 列表 （id not in&operator_id in）
 | id        | 软件id                                | 是    | 0     |
 | order            | 排序字段                                | 否    | saytime     |
 
+#### 30.customVary($fields, $vary, $limit, $order)
+存在不等于的组合查询
+
+参数:
+| 参数名          | 描述                                         | 必填  | 默认     |
+| --------------- | -------------------------------------------- | :---: | :------: |
+| fields         |  请求字段 ['a'=>1, 'b'=>[1,2,3]                                      | 是    | 0     |
+| vary         |  不等于    ['a'=>1]                                  | 是    | 0     |
+| limit         |  每页数据量, 需要大于1,0为不限制                                      | 是    | 0     |
+| order         | 排序字段                                     | 是    | weekip     |
+
 ### zt 专题模块
 
 #### 0. good($showzt, $classid, $limit, $order)
