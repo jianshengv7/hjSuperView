@@ -279,6 +279,19 @@ class Content extends Base
     }
 
     /**
+     * 信息所属专题列表
+     * @return boolean | array
+     */
+    public function getInfoTopics($id, $limit)
+    {
+        $params = [
+            'id'    => ($id),
+            'limit' => intval($limit),
+        ];
+        return $this->getData('speciallist', $params);
+    }
+
+    /**
      * 通过id不等级和game_id等于获取攻略
      *
      * @param $id

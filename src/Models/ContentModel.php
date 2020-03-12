@@ -121,6 +121,17 @@ class ContentModel extends BaseModel
     }
 
     /**
+     * 获取信息所属专题列表.
+     */
+    public function infoTopics($id = 0, $limit = 0)
+    {
+        if (empty($id)) {
+            return false;
+        }
+        return $this->dal()->getInfoTopics($id, $limit);
+    }
+
+    /**
      * 通过cid获取厂商
      *
      * @param int $cid
