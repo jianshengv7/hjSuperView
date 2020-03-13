@@ -310,6 +310,6 @@ class ContentModel extends BaseModel
     public function infoList($field = '', $value = 0, $limit=0 ,$order = 1)
     {
         $page = $this->getCurrentPage();
-        return $this->dal['mini']->getinfoList($field, $value, $page, $limit, $order);
+        return $this->dal()->getinfoList($field, $value, $page, $limit, $order);
     }
 }
