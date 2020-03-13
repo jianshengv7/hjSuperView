@@ -434,4 +434,25 @@ class Content extends Base
         ];
         return $this->getData('customVary', $params);
     }
+
+    /**
+     * miniapp自定义字段查询数据（关联查询）
+     *
+     * @param $field
+     * @param $value
+     * @param $limit
+     * @param $order
+     * @return array|bool
+     */
+    public function getinfoList($field, $value, $page, $limit, $order)
+    {
+        $params = [
+            'limit' => intval($limit),
+            'order' => $order,
+            'field' => $field,
+            'value' => $value,
+            'page' => $page
+        ];
+        return $this->getData('infoList', $params);
+    }
 }

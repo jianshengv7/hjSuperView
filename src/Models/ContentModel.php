@@ -297,4 +297,19 @@ class ContentModel extends BaseModel
     {
         return $this->dal['inner']->customVary($fields, $vary, $limit, $order);
     }
+
+    /**
+     * miniapp自定义字段查询数据(关联查询)
+     *
+     * @param string $field 字段名
+     * @param int $value     值
+     * @param int $limit
+     * @param int $order
+     * @return mixed
+     */
+    public function infoList($field = '', $value = 0, $limit=0 ,$order = 1)
+    {
+        $page = $this->getCurrentPage();
+        return $this->dal['mini']->getinfoList($field, $value, $page, $limit, $order);
+    }
 }
