@@ -3,12 +3,12 @@
 namespace SuperView\Dal\Api;
 
 /**
-* Content Dal.
-*/
+ * Content Dal.
+ */
 class Content extends Base
 {
 
-     /**
+    /**
      * 排名因子枚举
      */
     private static $periods = [
@@ -19,7 +19,7 @@ class Content extends Base
      * 排序因子枚举
      */
     private static $orderKeys = [
-        'newstime', 'newstimeasc', 'allhits', 'monthhits', 'weekhits', 'id','lastdotime', 'totalip',
+        'newstime', 'newstimeasc', 'allhits', 'monthhits', 'weekhits', 'id', 'lastdotime', 'totalip',
     ];
 
     /**
@@ -46,9 +46,9 @@ class Content extends Base
     {
         $params = [
             'classid' => ($classid),
-            'page'    => intval($page),
-            'limit'   => intval($limit),
-            'ispic'   => intval($isPic),
+            'page' => intval($page),
+            'limit' => intval($limit),
+            'ispic' => intval($isPic),
         ];
         return $this->getData('recent', $params);
     }
@@ -68,12 +68,12 @@ class Content extends Base
         }
 
         $params = [
-            'level'   => ($level),
+            'level' => ($level),
             'classid' => ($classid),
-            'page'    => intval($page),
-            'limit'   => intval($limit),
-            'ispic'   => intval($isPic),
-            'order'   => $order,
+            'page' => intval($page),
+            'limit' => intval($limit),
+            'ispic' => intval($isPic),
+            'order' => $order,
         ];
         return $this->getData($type, $params);
     }
@@ -82,16 +82,16 @@ class Content extends Base
      * 信息搜索列表：根据指定字段指定值
      * @return boolean | array
      */
-    public function getListByFieldValue($field,$value, $classid, $page, $limit, $isPic, $order)
+    public function getListByFieldValue($field, $value, $classid, $page, $limit, $isPic, $order)
     {
         $params = [
-            'field'   => $field,
-            'value'   => $value,
+            'field' => $field,
+            'value' => $value,
             'classid' => ($classid),
-            'page'    => intval($page),
-            'limit'   => intval($limit),
-            'ispic'   => intval($isPic),
-            'order'   => $order,
+            'page' => intval($page),
+            'limit' => intval($limit),
+            'ispic' => intval($isPic),
+            'order' => $order,
         ];
         return $this->getData('match', $params);
     }
@@ -107,7 +107,7 @@ class Content extends Base
         }
         $params = [
             'interval' => $period,
-            'classid'  => ($classid)
+            'classid' => ($classid)
         ];
 
         return $this->getData('count', $params);
@@ -146,10 +146,10 @@ class Content extends Base
     public function firsttitleInClass($firsttitle, $classidArr, $limit, $order)
     {
         $params = [
-            'firsttitle'   => $firsttitle,
-            'classidArr'   => $classidArr,
-            'limit'   => intval($limit),
-            'order'   => $order,
+            'firsttitle' => $firsttitle,
+            'classidArr' => $classidArr,
+            'limit' => intval($limit),
+            'order' => $order,
         ];
         return $this->getData('firsttitleInClass', $params);
     }
@@ -165,9 +165,9 @@ class Content extends Base
     public function getNeq($classid, $limit, $order)
     {
         $params = [
-            'classid'   => $classid,
-            'limit'   => intval($limit),
-            'order'   => $order,
+            'classid' => $classid,
+            'limit' => intval($limit),
+            'order' => $order,
         ];
         return $this->getData('neq', $params);
     }
@@ -184,10 +184,10 @@ class Content extends Base
     public function getOrderList($classid, $page, $limit, $order)
     {
         $params = [
-            'classid'   => $classid,
-            'page'   => $page,
-            'limit'   => intval($limit),
-            'order'   => $order,
+            'classid' => $classid,
+            'page' => $page,
+            'limit' => intval($limit),
+            'order' => $order,
         ];
         return $this->getData('order', $params);
     }
@@ -233,7 +233,7 @@ class Content extends Base
         $params = [
             'limit' => intval($limit),
             'order' => $order,
-            'page'   => $page,
+            'page' => $page,
         ];
         return $this->getData('companyList', $params);
     }
@@ -250,10 +250,10 @@ class Content extends Base
     public function getStrategy($game_id, $page, $limit, $order)
     {
         $params = [
-            'game_id'   => $game_id,
-            'page'   => $page,
-            'limit'   => intval($limit),
-            'order'   => $order,
+            'game_id' => $game_id,
+            'page' => $page,
+            'limit' => intval($limit),
+            'order' => $order,
         ];
         return $this->getData('strategy', $params);
     }
@@ -270,10 +270,10 @@ class Content extends Base
     public function getrankRule($downstatus, $isgood, $limit, $order)
     {
         $params = [
-            'downstatus'   => $downstatus,
-            'isgood'   => $isgood,
-            'limit'   => intval($limit),
-            'order'   => $order,
+            'downstatus' => $downstatus,
+            'isgood' => $isgood,
+            'limit' => intval($limit),
+            'order' => $order,
         ];
         return $this->getData('rankRule', $params);
     }
@@ -285,7 +285,7 @@ class Content extends Base
     public function getInfoTopics($id, $limit)
     {
         $params = [
-            'id'    => ($id),
+            'id' => ($id),
             'limit' => intval($limit),
         ];
         return $this->getData('speciallist', $params);
@@ -303,10 +303,10 @@ class Content extends Base
     public function getOtherStrategy($id, $game_id, $limit, $order)
     {
         $params = [
-            'id'   => $id,
-            'game_id'   => $game_id,
-            'limit'   => intval($limit),
-            'order'   => $order,
+            'id' => $id,
+            'game_id' => $game_id,
+            'limit' => intval($limit),
+            'order' => $order,
         ];
         return $this->getData('otherStrategy', $params);
     }
@@ -322,9 +322,9 @@ class Content extends Base
     public function getTuijian($softid, $classid, $limit)
     {
         $params = [
-            'softid'   => $softid,
-            'classid'   => $classid,
-            'limit'   => intval($limit),
+            'softid' => $softid,
+            'classid' => $classid,
+            'limit' => intval($limit),
         ];
         return $this->getData('tuijian', $params);
     }
@@ -341,7 +341,7 @@ class Content extends Base
     public function getCustomList($fields, $limit, $order, $page)
     {
         $params = [
-            'fields'  => $fields,
+            'fields' => $fields,
             'limit' => $limit,
             'order' => $order,
             'page' => $page
@@ -360,7 +360,7 @@ class Content extends Base
     public function allGameByIdAndCid($ids, $cid, $order)
     {
         $params = [
-            'ids'  => $ids,
+            'ids' => $ids,
             'cid' => $cid,
             'order' => $order
         ];
@@ -378,7 +378,7 @@ class Content extends Base
     public function getPl($softid, $checked, $limit)
     {
         $params = [
-            'softid'  => $softid,
+            'softid' => $softid,
             'checked' => $checked,
             'limit' => $limit
         ];
@@ -395,7 +395,7 @@ class Content extends Base
     public function getAllPl($id, $order)
     {
         $params = [
-            'id'  => $id,
+            'id' => $id,
             'order' => $order,
         ];
         return $this->getData('getAllPl', $params);
@@ -410,7 +410,7 @@ class Content extends Base
     public function otherSoft($softid)
     {
         $params = [
-            'softid'  => $softid,
+            'softid' => $softid,
         ];
         return $this->getData('otherSoft', $params);
     }
@@ -427,10 +427,10 @@ class Content extends Base
     public function customVary($fields, $vary, $limit, $order)
     {
         $params = [
-            'fields'  => $fields,
-            'vary'  => $vary,
-            'limit'  => $limit,
-            'order'  => $order,
+            'fields' => $fields,
+            'vary' => $vary,
+            'limit' => $limit,
+            'order' => $order,
         ];
         return $this->getData('customVary', $params);
     }

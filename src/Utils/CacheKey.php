@@ -12,9 +12,9 @@ class CacheKey
      *
      * @param $method
      * @param $params
-     * @param $model
      * @param $virtualModel
-     * @return array
+     * @return string
+     * @throws \Exception
      */
     public static function makeCachekey($method, $params, $virtualModel)
     {
@@ -41,15 +41,15 @@ class CacheKey
         $key = '';
         foreach ($depend as $k => $v) {
             if (!in_array($k, ['limit', 'isPic', 'classid'])) {
-                if(is_array($v)){
-                    if(static::is_assoc($v)){
-                        foreach($v as $ke => $val){
-                            $key .= '::'. $ke .'::'. (is_array($val) ? implode(',', $val) : $val);
+                if (is_array($v)) {
+                    if (static::is_assoc($v)) {
+                        foreach ($v as $ke => $val) {
+                            $key .= '::' . $ke . '::' . (is_array($val) ? implode(',', $val) : $val);
                         }
-                    }else{
-                        $key .= '::'. implode(',', $v);
+                    } else {
+                        $key .= '::' . implode(',', $v);
                     }
-                }else {
+                } else {
                     $key .= '::' . $v;
                 }
             }
@@ -97,7 +97,7 @@ class CacheKey
      */
     public static function insertCahce($params, $model, $method, $cacheMinutes)
     {
-        return  \SCache::getCachekey($model, $method, $params, $cacheMinutes);
+        return \SCache::getCachekey($model, $method, $params, $cacheMinutes);
     }
 
     /**
@@ -111,10 +111,10 @@ class CacheKey
     public static function custom($modelAlias, $method, $param)
     {
         return ':' . self::confirm_type($modelAlias)
-        . '::' . $modelAlias . '::'
-        . $method
-        . (isset($param['classid']) ? '::' . $param['classid'] : '')
-        . self::filterStr($param);
+            . '::' . $modelAlias . '::'
+            . $method
+            . (isset($param['classid']) ? '::' . $param['classid'] : '')
+            . self::filterStr($param);
     }
 
     /**
@@ -177,24 +177,6 @@ class CacheKey
             $res['param'][$parameter['name']] = isset($arguments[$position]) ? $arguments[$position] : $parameter['defaultValue'];
         }
         return $res;
-    }
-
-    /**
-     * 获取方法limit字段的值
-     *
-     * @param $modelAlias
-     * @param $method
-     * @throws \Exception
-     */
-    public static function getLimit($modelAlias, $method, $params)
-    {
-        $param = self::reflexMethod($modelAlias, $method);
-        $depend = [];
-        foreach ($param AS $parameter) {
-            $position = $parameter['position'];
-            $depend[$parameter['name']] = isset($params[$position]) ? $params[$position] : $parameter['defaultValue'];
-        }
-        return $depend['limit'] ?? 0;
     }
 
     /**

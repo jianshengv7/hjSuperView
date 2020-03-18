@@ -10,7 +10,7 @@ return [
     'refresh_cache' => 0,
 
     // Api service host.
-    'api_base_url' => 'http://hj.api.zz314.com/huajun', //test001
+    'api_base_url' => 'http://hj.api.zz314.com/huajun',
 
     // Models alias map to class.
     'models' => [
@@ -22,7 +22,7 @@ return [
         'comment' => SuperView\Models\CommentModel::class,
         'inner' => SuperView\Models\InnerModel::class,
         'foot' => SuperView\Models\InnerModel::class,
-        'other' =>  SuperView\Models\OtherModel::class,
+        'other' => SuperView\Models\OtherModel::class,
     ],
 
     'dals' => [
@@ -33,8 +33,8 @@ return [
         'custom' => SuperView\Dal\Api\Custom::class,
         'comment' => SuperView\Dal\Api\Comment::class,
         'inner' => SuperView\Dal\Api\Inner::class,
-        'foot' =>  SuperView\Dal\Api\Inner::class,
-        'other' =>  SuperView\Dal\Api\Other::class,
+        'foot' => SuperView\Dal\Api\Inner::class,
+        'other' => SuperView\Dal\Api\Other::class,
     ],
 
     'pagination' => [
@@ -50,8 +50,8 @@ return [
     //新缓存规则部分是使用
     'type' => [
         'category' => ['category'],
-        'soft' => ['soft','android','ios','applet', 'dnb', 'mini'],
-        'news' => [ 'news'],
+        'soft' => ['soft', 'android', 'ios', 'applet', 'dnb', 'mini'],
+        'news' => ['news'],
         'zt' => ['zt'],
         'strategy' => ['strategy'],
         'inner' => ['foot', 'inner'],

@@ -62,7 +62,7 @@ class ContentModel extends BaseModel
     /**
      * 信息搜索列表：根据指定字段指定值
      */
-    public function match($field,$value, $classid = 0, $limit = 0, $isPic = 0, $order = 'newstime')
+    public function match($field, $value, $classid = 0, $limit = 0, $isPic = 0, $order = 'newstime')
     {
         $field = trim($field);
         $value = trim($value);
@@ -71,7 +71,7 @@ class ContentModel extends BaseModel
             return [];
         }
         $page = $this->getCurrentPage();
-        return $this->dal()->getListByFieldValue($field,$value, $classid, $page, $limit, $isPic, $order);
+        return $this->dal()->getListByFieldValue($field, $value, $classid, $page, $limit, $isPic, $order);
     }
 
     /**
@@ -97,7 +97,7 @@ class ContentModel extends BaseModel
      * 查询多个class下的推荐数据
      *
      * @param int $firsttitle 头条等级
-     * @param array $classidArr  分类数组
+     * @param array $classidArr 分类数组
      * @param int $limit
      * @param string $order
      * @return mixed
@@ -139,7 +139,7 @@ class ContentModel extends BaseModel
      */
     public function company($cid = 0)
     {
-        return  $this->dal()->getCompany($cid);
+        return $this->dal()->getCompany($cid);
     }
 
     /**
@@ -152,7 +152,7 @@ class ContentModel extends BaseModel
     public function companyList($limit = 0, $order = "dnb_num")
     {
         $page = $this->getCurrentPage();
-        return  $this->dal()->getCompanyList($limit, $order, $page);
+        return $this->dal()->getCompanyList($limit, $order, $page);
     }
 
     /**
@@ -163,7 +163,7 @@ class ContentModel extends BaseModel
      */
     public function companyPath($company_path = '')
     {
-        return  $this->dal()->companyPath($company_path);
+        return $this->dal()->companyPath($company_path);
     }
 
     /**
@@ -177,7 +177,7 @@ class ContentModel extends BaseModel
     public function strategy($game_id = 0, $limit = 0, $order = 'lastdotime')
     {
         $page = $this->getCurrentPage();
-        return  $this->dal()->getStrategy($game_id, $page, $limit, $order);
+        return $this->dal()->getStrategy($game_id, $page, $limit, $order);
     }
 
     /**
@@ -191,7 +191,7 @@ class ContentModel extends BaseModel
      */
     public function rankRule($downstatus = 0, $isgood = 0, $limit = 0, $order = 'lastdotime')
     {
-        return  $this->dal()->getrankRule($downstatus, $isgood, $limit, $order);
+        return $this->dal()->getrankRule($downstatus, $isgood, $limit, $order);
     }
 
     /**
@@ -205,7 +205,7 @@ class ContentModel extends BaseModel
      */
     public function otherStrategy($id, $game_id = 0, $limit = 0, $order = 'newstime')
     {
-        return  $this->dal()->getOtherStrategy($id, $game_id, $limit, $order);
+        return $this->dal()->getOtherStrategy($id, $game_id, $limit, $order);
     }
 
     /**
@@ -217,7 +217,7 @@ class ContentModel extends BaseModel
      */
     public function tuijian($softid = 0, $classid = 0, $limit = 3)
     {
-        return  $this->dal()->getTuijian($softid, $classid, $limit);
+        return $this->dal()->getTuijian($softid, $classid, $limit);
     }
 
     /**
@@ -256,7 +256,7 @@ class ContentModel extends BaseModel
      * @param int $limit
      * @return mixed
      */
-    public function getPl($softid = 0, $checked = 0,  $limit = 0)
+    public function getPl($softid = 0, $checked = 0, $limit = 0)
     {
         return $this->dal()->getPl($softid, $checked, $limit);
     }
@@ -302,12 +302,12 @@ class ContentModel extends BaseModel
      * miniapp自定义字段查询数据(关联查询)
      *
      * @param string $field 字段名
-     * @param int $value     值
+     * @param int $value 值
      * @param int $limit
      * @param int $order
      * @return mixed
      */
-    public function infoList($field = '', $value = 0, $limit=0 ,$order = 1)
+    public function infoList($field = '', $value = 0, $limit = 0, $order = 1)
     {
         $page = $this->getCurrentPage();
         return $this->dal()->getinfoList($field, $value, $page, $limit, $order);
