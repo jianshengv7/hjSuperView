@@ -40,7 +40,7 @@ class CacheKey
     {
         $key = '';
         foreach ($depend as $k => $v) {
-            if (!in_array($k, ['limit', 'isPic', 'classid'])) {
+            if (!in_array($k, ['isPic', 'classid'])) {
                 if (is_array($v)) {
                     if (static::is_assoc($v)) {
                         foreach ($v as $ke => $val) {
