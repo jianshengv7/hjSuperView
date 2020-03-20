@@ -31,16 +31,18 @@ class CacheKey
     }
 
     /**
-     * 过滤字段生成最终缓存key
+     * 过滤字段生成最终缓存key(contentModel的limit小于15条，缓存key统一使用15条)
      *
      * @param $depend
      * @return mixed
      */
-    public static function filterStr($depend)
+    public static function filterStr($depend, $modelAlias)
     {
+        $model = self::getModel($modelAlias);
+        $limit = \Sconfig::get('limit');
         $key = '';
         foreach ($depend as $k => $v) {
-            if (!in_array($k, ['isPic', 'classid'])) {
+            if (!in_array($k, ['isPic', 'classid', 'limit'])) {
                 if (is_array($v)) {
                     if (static::is_assoc($v)) {
                         foreach ($v as $ke => $val) {
@@ -53,12 +55,20 @@ class CacheKey
                     $key .= '::' . $v;
                 }
             }
+            if ($k == 'limit') {
+                if ($model === 'SuperView\Models\ContentModel') {
+                    $limit = $v < $limit ? $limit : $v;
+                    $key .= '::' . $limit;
+                } else {
+                    $key .= '::' . $v;
+                }
+            }
         }
         return $key;
     }
 
     /**
-     * 判断索引数组
+     * 判断关联数组
      *
      * @param $array
      * @return bool
@@ -114,7 +124,7 @@ class CacheKey
             . '::' . $modelAlias . '::'
             . $method
             . (isset($param['classid']) ? '::' . $param['classid'] : '')
-            . self::filterStr($param);
+            . self::filterStr($param, $modelAlias);
     }
 
     /**

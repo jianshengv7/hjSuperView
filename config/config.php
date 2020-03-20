@@ -58,5 +58,7 @@ return [
         'company' => ['company']
     ],
 
+    //api设置的最小查询limit
+    'limit' => 15,
 
 ];
