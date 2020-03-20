@@ -142,13 +142,13 @@ class TopicModel extends BaseModel
     /**
      * 自定参数请求（不需要使用关联查询）
      *
-     * @param $filed
+     * @param array $filed
      * @param $value
      * @param $limit
      * @param $order
      * @return mixed
      */
-    public function match($fields = '', $limit = 0, $order = 'addtime')
+    public function match($fields, $limit = 0, $order = 'addtime')
     {
         return $this->dal['zt']->getMatch($fields, $limit, $order);
     }
