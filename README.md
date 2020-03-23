@@ -514,7 +514,7 @@ zt表 ztid between 2个值之间的列表
 | max        | 范围                               | 是    | 0     |
 
 #### 13.ztaddJoinzt($fields, $limit, $order, $database)
-ztadd & zt表关联信息
+ztadd & zt表关联信息  (参数前缀 定死为zt , ztadd)
 
 参数：
 | 参数名        | 描述                                         | 必填  | 默认     |
