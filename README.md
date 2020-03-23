@@ -513,7 +513,7 @@ zt表 ztid between 2个值之间的列表
 | min        | 范围                               | 是    | 0     |
 | max        | 范围                               | 是    | 0     |
 
-#### 13.ztaddJoinzt($fields, $limit, $order)
+#### 13.ztaddJoinzt($fields, $limit, $order, $database)
 ztadd & zt表关联信息
 
 参数：
@@ -522,6 +522,7 @@ ztadd & zt表关联信息
 | fields        | 参数  ['a'=>1,'b'=>2]                              | 是    | null     |
 | limit         | 每页数据量,0为不限制                         | 否    | 0        |
 | order         | 排序字段                                     | 否    | newstime |
+| database         | 数据库                                     | 否    | database |
 
 #### 14.ztidNotIn($ztids, $limit, $order)
 专题表ztid notin

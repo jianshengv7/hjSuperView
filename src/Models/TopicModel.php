@@ -206,12 +206,13 @@ class TopicModel extends BaseModel
      * @param string $fields
      * @param int $limit
      * @param string $order
+     * @param string $database
      * @return mixed
      */
-    public function ztaddJoinzt($fields = '', $limit = 0, $order = 'onclick')
+    public function ztaddJoinzt($fields = '', $limit = 0, $order = 'onclick', $database = 'database')
     {
         $page = $this->getCurrentPage();
-        return $this->dal['zt']->ztaddJoinzt($fields, $limit, $order, $page);
+        return $this->dal['zt']->ztaddJoinzt($fields, $limit, $order, $database, $page);
     }
 
     /**
