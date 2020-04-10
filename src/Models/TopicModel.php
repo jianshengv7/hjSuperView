@@ -239,4 +239,17 @@ class TopicModel extends BaseModel
     {
         return $this->dal['zt']->ztidNotIn($ztids, $limit, $order);
     }
+
+    /**
+     * news站专用方法（ztinfo表关联news表查询列表）
+     *
+     * @param array $fields
+     * @param int $limit
+     * @param string $order
+     * @return mixed
+     */
+    public function getListByZtinfoNews($fields = [], $limit = 0, $order = 'newstime', $database = 'news')
+    {
+        return $this->dal['zt']->getListByZtinfoNews($fields, $limit, $order, $database);
+    }
 }

@@ -321,4 +321,24 @@ class Topic extends Base
         return $this->getData('ztidNotIn', $params);
 
     }
+
+    /**
+     * news站专用方法（ztinfo表关联news表查询列表）
+     *
+     * @param $fields
+     * @param $limit
+     * @param $order
+     * @param $database
+     * @return array|bool
+     */
+    public function getListByZtinfoNews($fields, $limit, $order, $database)
+    {
+       $params = [
+           'fields' => $fields,
+           'limit' => $limit,
+           'order' => $order,
+           'database' => $database,
+       ];
+       return $this->getData('getListByZtinfoNews', $params);
+    }
 }

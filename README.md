@@ -546,6 +546,17 @@ ztadd & zt表关联信息  (参数前缀 定死为zt , ztadd)
 | limit         | 每页数据量,0为不限制                         | 否    | 0        |
 | order         | 排序字段                                     | 否    | newstime |
 
+#### 15.getListByZtinfoNews($fields, $limit, $order, $database)
+news站专用方法（ztinfo表关联news表查询列表）
+
+参数：
+| 参数名        | 描述                                         | 必填  | 默认     |
+| ------------- | -------------------------------------------- | :---: | :------: |
+| fields        |   ['a'=>1, 'b'=>2]                              | 是    | null     |
+| limit         | 每页数据量,0为不限制                         | 否    | 0        |
+| order         | 排序字段                                     | 否    | newstime |
+| database         | 数据库                                    | 否    | news |
+
 ### other 其他模块
 
 #### 1. sortTdk($classid, $order)
