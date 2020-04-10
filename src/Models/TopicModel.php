@@ -248,7 +248,7 @@ class TopicModel extends BaseModel
      * @param string $order
      * @return mixed
      */
-    public function getListByZtinfoNews($fields = [], $limit = 0, $order = 'newstime', $database = 'news')
+    public function listByZtinfoNews($fields = [], $limit = 0, $order = 'newstime', $database = 'news')
     {
         return $this->dal['zt']->getListByZtinfoNews($fields, $limit, $order, $database);
     }

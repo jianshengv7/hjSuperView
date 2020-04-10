@@ -339,6 +339,6 @@ class Topic extends Base
            'order' => $order,
            'database' => $database,
        ];
-       return $this->getData('getListByZtinfoNews', $params);
+       return $this->getData('listByZtinfoNews', $params);
     }
 }

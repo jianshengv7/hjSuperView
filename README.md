@@ -546,7 +546,7 @@ ztadd & zt表关联信息  (参数前缀 定死为zt , ztadd)
 | limit         | 每页数据量,0为不限制                         | 否    | 0        |
 | order         | 排序字段                                     | 否    | newstime |
 
-#### 15.getListByZtinfoNews($fields, $limit, $order, $database)
+#### 15.listByZtinfoNews($fields, $limit, $order, $database)
 news站专用方法（ztinfo表关联news表查询列表）
 
 参数：
