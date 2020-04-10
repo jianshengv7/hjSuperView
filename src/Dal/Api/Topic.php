@@ -323,6 +323,26 @@ class Topic extends Base
     }
 
     /**
+     * 分类自定义方法(news站专用方法)
+     *
+     * @param $fields
+     * @param $limit
+     * @param $order
+     * @param $database
+     * @return array|bool
+     */
+    public function classMatch($fields, $limit, $order, $database)
+    {
+        $params = [
+            'fields' => $fields,
+            'order' => $order,
+            'limit' => intval($limit),
+            'database' => $database,
+        ];
+        return $this->getData('classMatch', $params);
+    }
+
+    /**
      * news站专用方法（ztinfo表关联news表查询列表）
      *
      * @param $fields

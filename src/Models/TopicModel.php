@@ -241,6 +241,20 @@ class TopicModel extends BaseModel
     }
 
     /**
+     * news站专用方法 (分类自定义方法)
+     *
+     * @param array $fields
+     * @param int $limit
+     * @param string string $order
+     * @param string $database
+     * @return mixed
+     */
+    public function classMatch($fields, $limit, $order = 'classid', $database = 'database')
+    {
+        return $this->dal['zt']->classMatch($fields, $limit, $order, $database);
+    }
+
+    /**
      * news站专用方法（ztinfo表关联news表查询列表）
      *
      * @param array $fields

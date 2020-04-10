@@ -334,18 +334,4 @@ class CategoryModel extends BaseModel
     {
         return false;
     }
-
-    /**
-     * 分类自定义方法
-     *
-     * @param array $fields
-     * @param int $limit
-     * @param string string $order
-     * @param string $database
-     * @return mixed
-     */
-    public function match($fields, $limit, $order = 'classid', $database = 'database')
-    {
-        return $this->dal['category']->getMatch($fields, $limit, $order, $database);
-    }
 }

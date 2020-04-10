@@ -22,26 +22,6 @@ class Category extends Base
     }
 
     /**
-     * 分类自定义方法
-     *
-     * @param $fields
-     * @param $limit
-     * @param $order
-     * @param $database
-     * @return array|bool
-     */
-    public function getMatch($fields, $limit, $order, $database)
-    {
-        $params = [
-            'fields' => $fields,
-            'order' => $order,
-            'limit' => intval($limit),
-            'database' => $database,
-        ];
-        return $this->getData('match', $params);
-    }
-
-    /**
      * Set top category id.
      *
      * @param  int $classid
