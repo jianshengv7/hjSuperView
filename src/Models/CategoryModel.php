@@ -346,6 +346,6 @@ class CategoryModel extends BaseModel
      */
     public function match($fields, $limit, $order = 'classid', $database = 'database')
     {
-        return $this->dal['category']->getMatch();
+        return $this->dal['category']->getMatch($fields, $limit, $order, $database);
     }
 }
