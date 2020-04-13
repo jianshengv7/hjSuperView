@@ -266,4 +266,18 @@ class TopicModel extends BaseModel
     {
         return $this->dal['zt']->getListByZtinfoNews($fields, $limit, $order, $database);
     }
+
+    /**
+     * 专题多条件查询（可切库, 无关联）
+     *
+     * @param array $fields
+     * @param int $limit
+     * @param string $order
+     * @param string $database
+     * @return mixed
+     */
+    public function customMatch($fields = [], $limit = 0, $order = 'ztid', $database = 'news')
+    {
+        return $this->dal['zt']->customMatch($fields, $limit, $order, $database);
+    }
 }
