@@ -148,9 +148,9 @@ class TopicModel extends BaseModel
      * @param $order
      * @return mixed
      */
-    public function match($fields, $limit = 0, $order = 'addtime')
+    public function match($fields, $limit = 0, $order = 'addtime', $database = 'database')
     {
-        return $this->dal['zt']->getMatch($fields, $limit, $order);
+        return $this->dal['zt']->getMatch($fields, $limit, $order, $database);
     }
 
     /**
@@ -265,19 +265,5 @@ class TopicModel extends BaseModel
     public function listByZtinfoNews($fields = [], $limit = 0, $order = 'newstime', $database = 'news')
     {
         return $this->dal['zt']->getListByZtinfoNews($fields, $limit, $order, $database);
-    }
-
-    /**
-     * 专题多条件查询（可切库, 无关联）
-     *
-     * @param array $fields
-     * @param int $limit
-     * @param string $order
-     * @param string $database
-     * @return mixed
-     */
-    public function customMatch($fields = [], $limit = 0, $order = 'ztid', $database = 'news')
-    {
-        return $this->dal['zt']->customMatch($fields, $limit, $order, $database);
     }
 }

@@ -191,14 +191,16 @@ class Topic extends Base
      * @param $value
      * @param $limit
      * @param $order
+     * @param $database
      * @return array|bool
      */
-    public function getMatch($fields, $limit, $order)
+    public function getMatch($fields, $limit, $order, $database)
     {
         $params = [
             'fields' => $fields,
             'limit' => $limit,
             'order' => $order,
+            'database' =>$database,
         ];
         return $this->getData('match', $params);
     }
@@ -360,25 +362,5 @@ class Topic extends Base
            'database' => $database,
        ];
        return $this->getData('listByZtinfoNews', $params);
-    }
-
-    /**
-     * 专题多条件查询（可切库，无关联）
-     *
-     * @param $fields
-     * @param $limit
-     * @param $order
-     * @param $database
-     * @return array|bool
-     */
-    public function customMatch($fields, $limit, $order, $database)
-    {
-        $params = [
-            'fields' => $fields,
-            'limit' => $limit,
-            'order' => $order,
-            'database' => $database,
-        ];
-        return $this->getData('customMatch', $params);
     }
 }
