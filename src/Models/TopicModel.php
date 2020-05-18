@@ -68,7 +68,7 @@ class TopicModel extends BaseModel
         return $this->dal['zt']->taginfo($ztid, $classid, $page, $limit);
     }
     /**
-     * 详情页定制接口 todo 测试方法待删除
+     * 详情页定制接口
      *
      * @param $id
      * @param string $model
@@ -85,7 +85,6 @@ class TopicModel extends BaseModel
         return $data;
 
     }
-
 
     /**
      * 专题信息列表, 无法指定频道, 使用该方法获取该专题下的所有频道的内容.
@@ -134,9 +133,9 @@ class TopicModel extends BaseModel
      * @param string $order
      * @return mixed
      */
-    public function matchZt($fields, $limit = 0 , $order = 'onclick', $database = 'database')
+    public function matchZt($fields, $limit = 0 , $order = 'onclick')
     {
-        return $this->dal['zt']->getMatchZt($fields, $limit, $order, $database);
+        return $this->dal['zt']->getMatchZt($fields, $limit, $order);
     }
 
     /**
@@ -148,9 +147,9 @@ class TopicModel extends BaseModel
      * @param $order
      * @return mixed
      */
-    public function match($fields, $limit = 0, $order = 'addtime', $database = 'database')
+    public function match($fields, $limit = 0, $order = 'addtime')
     {
-        return $this->dal['zt']->getMatch($fields, $limit, $order, $database);
+        return $this->dal['zt']->getMatch($fields, $limit, $order);
     }
 
     /**
@@ -206,64 +205,12 @@ class TopicModel extends BaseModel
      * @param string $fields
      * @param int $limit
      * @param string $order
-     * @param string $database
      * @return mixed
      */
-    public function ztaddJoinzt($fields = '', $limit = 0, $order = 'onclick', $database = 'database')
+    public function ztaddJoinzt($fields = '', $limit = 0, $order = 'onclick')
     {
         $page = $this->getCurrentPage();
-        return $this->dal['zt']->ztaddJoinzt($fields, $limit, $order, $database, $page);
+        return $this->dal['zt']->ztaddJoinzt($fields, $limit, $order, $page);
     }
 
-    /**
-     * zt表 ztid between 2个值之间的列表
-     *
-     * @param int $min
-     * @param int $max
-     * @return mixed
-     */
-    public function ztBetween($min = 0, $max = 0)
-    {
-        return $this->dal['zt']->ztBetween($min, $max);
-    }
-
-    /**
-     * 专题表ztid notin
-     *
-     * @param array $ztids
-     * @param int $limit
-     * @param string $order
-     * @return mixed
-     */
-    public function ztidNotIn($ztids = [], $limit = 0, $order = 'addtime')
-    {
-        return $this->dal['zt']->ztidNotIn($ztids, $limit, $order);
-    }
-
-    /**
-     * news站专用方法 (分类自定义方法)
-     *
-     * @param array $fields
-     * @param int $limit
-     * @param string string $order
-     * @param string $database
-     * @return mixed
-     */
-    public function classMatch($fields, $limit, $order = 'classid', $database = 'database')
-    {
-        return $this->dal['zt']->classMatch($fields, $limit, $order, $database);
-    }
-
-    /**
-     * news站专用方法（ztinfo表关联news表查询列表）
-     *
-     * @param array $fields
-     * @param int $limit
-     * @param string $order
-     * @return mixed
-     */
-    public function listByZtinfoNews($fields = [], $limit = 0, $order = 'newstime', $database = 'news')
-    {
-        return $this->dal['zt']->getListByZtinfoNews($fields, $limit, $order, $database);
-    }
 }

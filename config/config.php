@@ -5,7 +5,7 @@ return [
     'info_url' => '',
 
     // Cache lifetime.
-    'cache_minutes' => 120,
+    'cache_minutes' => 7200,
     // 是否刷新缓存.
     'refresh_cache' => 0,
 
@@ -20,9 +20,7 @@ return [
         'utils' => SuperView\Models\UtilsModel::class,
         'custom' => SuperView\Models\CustomModel::class,
         'comment' => SuperView\Models\CommentModel::class,
-        'inner' => SuperView\Models\InnerModel::class,
         'foot' => SuperView\Models\InnerModel::class,
-        'other' => SuperView\Models\OtherModel::class,
     ],
 
     'dals' => [
@@ -32,9 +30,7 @@ return [
         'utils' => SuperView\Dal\Api\Utils::class,
         'custom' => SuperView\Dal\Api\Custom::class,
         'comment' => SuperView\Dal\Api\Comment::class,
-        'inner' => SuperView\Dal\Api\Inner::class,
         'foot' => SuperView\Dal\Api\Inner::class,
-        'other' => SuperView\Dal\Api\Other::class,
     ],
 
     'pagination' => [
@@ -50,12 +46,9 @@ return [
     //新缓存规则部分是使用
     'type' => [
         'category' => ['category'],
-        'soft' => ['soft', 'android', 'ios', 'applet', 'dnb', 'mini'],
+        'soft' => ['soft', 'iossoft', 'iosgame', 'game', 'dnb', 'azsoft', 'azgame'],
         'news' => ['news'],
         'zt' => ['zt'],
-        'strategy' => ['strategy'],
-        'inner' => ['foot', 'inner'],
-        'company' => ['company']
     ],
 
     //api设置的最小查询limit

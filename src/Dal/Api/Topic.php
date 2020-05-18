@@ -173,13 +173,12 @@ class Topic extends Base
      * @param $database
      * @return array|bool
      */
-    public function getMatchZt($fields, $limit, $order, $database)
+    public function getMatchZt($fields, $limit, $order)
     {
         $params = [
             'fields' => $fields,
             'limit' => $limit,
             'order' => $order,
-            'database' => $database,
         ];
         return $this->getData('mathZt', $params);
     }
@@ -194,13 +193,12 @@ class Topic extends Base
      * @param $database
      * @return array|bool
      */
-    public function getMatch($fields, $limit, $order, $database)
+    public function getMatch($fields, $limit, $order)
     {
         $params = [
             'fields' => $fields,
             'limit' => $limit,
             'order' => $order,
-            'database' =>$database,
         ];
         return $this->getData('match', $params);
     }
@@ -274,93 +272,16 @@ class Topic extends Base
      * @param $fields
      * @param $limit
      * @param $order
-     * @param $database
      * @return array|bool
      */
-    public function ztaddJoinzt($fields, $limit, $order, $database, $page)
+    public function ztaddJoinzt($fields, $limit, $order, $page)
     {
         $params = [
             'fields' => $fields,
             'limit' => $limit,
             'order' => $order,
-            'database' => $database,
             'page' => $page
         ];
         return $this->getData('ztaddJoinzt', $params);
-    }
-
-    /**
-     * zt表 ztid between 2个值之间的列表
-     *
-     * @param $min
-     * @param $max
-     * @return array|bool
-     */
-    public function ztBetween($min, $max)
-    {
-        $params = [
-            'min' => $min,
-            'max' => $max,
-        ];
-        return $this->getData('ztBetween', $params);
-    }
-
-    /**
-     * 专题表ztid notin
-     *
-     * @param $ztids
-     * @param $limit
-     * @param $order
-     * @return array|bool
-     */
-    public function ztidNotIn($ztids, $limit, $order)
-    {
-        $params = [
-            'ztids' => $ztids,
-            'limit' => $limit,
-            'order' => $order,
-        ];
-        return $this->getData('ztidNotIn', $params);
-
-    }
-
-    /**
-     * 分类自定义方法(news站专用方法)
-     *
-     * @param $fields
-     * @param $limit
-     * @param $order
-     * @param $database
-     * @return array|bool
-     */
-    public function classMatch($fields, $limit, $order, $database)
-    {
-        $params = [
-            'fields' => $fields,
-            'order' => $order,
-            'limit' => intval($limit),
-            'database' => $database,
-        ];
-        return $this->getData('classMatch', $params);
-    }
-
-    /**
-     * news站专用方法（ztinfo表关联news表查询列表）
-     *
-     * @param $fields
-     * @param $limit
-     * @param $order
-     * @param $database
-     * @return array|bool
-     */
-    public function getListByZtinfoNews($fields, $limit, $order, $database)
-    {
-       $params = [
-           'fields' => $fields,
-           'limit' => $limit,
-           'order' => $order,
-           'database' => $database,
-       ];
-       return $this->getData('listByZtinfoNews', $params);
     }
 }
