@@ -89,6 +89,13 @@ SuperView::get('soft')->page(false)->recent(); // 默认为第一页, 作用相�
 ]
 ```
 
+##模型名称
+| 支点        | 模型名
+|------------|---------------------------------------------
+| category   | ['category']
+| soft       | ['soft', 'iossoft', 'iosgame', 'game', 'dnb', 'azsoft', 'azgame']
+| news       | ['aznews', 'iosnews', 'softnews', 'kjnews', 'ylnews', 'gamenews', 'dnbnews', 'smsnews']
+| zt         | ['zt']
 
 ## Api
 ### category 分类模块
