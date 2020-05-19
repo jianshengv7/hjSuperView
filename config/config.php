@@ -45,7 +45,7 @@ return [
     'type' => [
         'category' => ['category'],
         'soft' => ['soft', 'iossoft', 'iosgame', 'game', 'dnb', 'azsoft', 'azgame'],
-        'news' => ['news'],
+        'news' => ['aznews', 'iosnews', 'softnews', 'kjnews', 'ylnews', 'gamenews', 'dnbnews', 'smsnews'],
         'zt' => ['zt'],
     ],
 
