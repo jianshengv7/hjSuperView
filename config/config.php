@@ -46,7 +46,7 @@ return [
         'category' => ['category'],
         'soft' => ['soft', 'iossoft', 'iosgame', 'game', 'dnb', 'azsoft', 'azgame'],
         'news' => ['aznews', 'iosnews', 'softnews', 'kjnews', 'ylnews', 'gamenews', 'dnbnews', 'smsnews', 'news'],
-        'zt' => ['topic'],
+        'zt' => ['zt'],
     ],
 
     //api设置的最小查询limit
