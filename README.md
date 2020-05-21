@@ -302,6 +302,16 @@ SuperView::get('soft')->page(false)->recent(); // 默认为第一页, 作用相�
 | id         |  软件id                                    | 是    | 0     |
 | limit         |  每页数据量, 需要大于1,0为不限制                                      | 是    | 0     |
 
+#### 14.getHotSearchForClass（$classid， $limit）
+内联词数据获取（4个关键词）
+
+参数:
+| 参数名          | 描述                                         | 必填  | 默认     |
+| --------------- | -------------------------------------------- | :---: | :------: |
+| classid         |  软件id                                    | 是    | 0     |
+| limit         |  每页数据量, 需要大于1,0为不限制                                      | 是    | 0     |
+
+
 ### zt 专题模块
 
 #### 0. good($showzt, $classid, $limit, $order)

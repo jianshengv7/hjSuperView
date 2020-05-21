@@ -183,4 +183,16 @@ class ContentModel extends BaseModel
     {
         return $this->dal()->getAllPl($id, $order);
     }
+
+    /**
+     * 内联词数据获取（4个关键词）
+     *
+     * @param string $classid
+     * @param int $limit
+     * @return mixed
+     */
+    public function getHotSearchForClass(string $classid = '' ,int $limit = 0)
+    {
+        return $this->dal()->getHotSearchForClass($classid, $limit);
+    }
 }

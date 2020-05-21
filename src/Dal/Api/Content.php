@@ -280,4 +280,13 @@ class Content extends Base
         ];
         return $this->getData('getAllPl', $params);
     }
+
+    public function getHotSearchForClass($classid, $limit)
+    {
+        $params = [
+            'classid' => $classid,
+            'limit' => $limit,
+        ];
+        return $this->getData('getHotSearchForClass', $params);
+    }
 }
