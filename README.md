@@ -480,6 +480,17 @@ ztadd & zt表关联信息  (参数前缀 定死为zt , ztadd)
 | simple          | 是否使用简洁模式                             | 否    | false    |
 | options         | 数组, 参考Configs下的pagination              | 否    | 20       |
 
+#### 3.friendLink($classid, $field, $home)
+友链
+
+参数:
+| 参数名          | 描述                                         | 必填  | 默认     |
+| --------------- | -------------------------------------------- | :---: | :------: |
+| classid           | 分类id                                  | 是    | 0     |
+| field           |  数组                                   | 是    | null     |
+| home           |  is_home              | 是    | null     |
+
+
 ### comment 评论模块
 #### 1.comment($id, $limit, $order)
 获取评论

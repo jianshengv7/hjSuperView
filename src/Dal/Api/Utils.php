@@ -21,4 +21,22 @@ class Utils extends Base
         return $this->getData('relationWord', $params);
     }
 
+    /**
+     * 友链
+     *
+     * @param $classid
+     * @param $field
+     * @param $home
+     * @return array|bool|mixed
+     */
+    public function friendLink($classid, $field, $home)
+    {
+        $params = [
+            'classid' => $classid,
+            'field' => $field,
+            'home' => $home,
+        ];
+        return $this->getData('friendLink', $params);
+    }
+
 }

@@ -27,4 +27,16 @@ class UtilsModel extends BaseModel
         return $this->dal['utils']->relationWord($softid);
     }
 
+    /**
+     * 友链
+     *
+     * @param int $classid
+     * @param array $field
+     * @param string $home
+     * @return mixed
+     */
+    public function friendLink($classid = 0, $field = [], $home = '')
+    {
+        return $this->dal['utils']->friendLink($classid, $field, $home);
+    }
 }
