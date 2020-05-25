@@ -262,7 +262,7 @@ SuperView::get('soft')->page(false)->recent(); // 默认为第一页, 作用相�
 | limit         | 每页数据量,0为不限制                         | 否    | 0        |
 | order         | 排序字段                                     | 否    | lastdotime |
 
-#### 10.customList($fields, $limit, $order)
+#### 10.customList($fields, $limit, $order, $operator)
 自定义参数请求（多个参数以逗号分隔，多个值以逗号分隔，参数和值数量必须对应）
 
 参数：
@@ -271,6 +271,7 @@ SuperView::get('soft')->page(false)->recent(); // 默认为第一页, 作用相�
 | fileds        | 参数    ['a'=>1, 'b'=>2]                                 | 是    | null     |
 | limit         | 每页数据量,0为不限制                         | 否    | 0        |
 | order         | 排序字段                                     | 否    | newstime |
+| operator      | 拼接条件                                     | 否 | and|
 
 #### 11.getPl($softid, $checked, $limit)
 获取评论
@@ -310,6 +311,17 @@ SuperView::get('soft')->page(false)->recent(); // 默认为第一页, 作用相�
 | --------------- | -------------------------------------------- | :---: | :------: |
 | classid         |  软件id                                    | 是    | 0     |
 | limit         |  每页数据量, 需要大于1,0为不限制                                      | 是    | 0     |
+
+#### 15.matchQuery($type, $order, $limit)
+特殊条件查询（and | or 同时存在）
+
+参数:
+| 参数名          | 描述                                         | 必填  | 默认     |
+| --------------- | -------------------------------------------- | :---: | :------: |
+| type         |  种类                                  | 是    | 0     |
+| order         |  排序                                     | 是    | newstime     |
+| limit         |  每页数据量, 需要大于1,0为不限制                                      | 是    | 0     |
+
 
 
 ### zt 专题模块

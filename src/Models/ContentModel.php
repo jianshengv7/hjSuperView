@@ -153,10 +153,10 @@ class ContentModel extends BaseModel
      * @param string $order
      * @return mixed
      */
-    public function customList($fields, $limit = 0, $order = 'lastdotime')
+    public function customList($fields, $limit = 0, $order = 'lastdotime', $operator = 'and')
     {
         $page = $this->getCurrentPage();
-        return $this->dal()->getCustomList($fields, $limit, $order, $page);
+        return $this->dal()->getCustomList($fields, $limit, $order, $page, $operator);
     }
 
     /**
@@ -191,8 +191,23 @@ class ContentModel extends BaseModel
      * @param int $limit
      * @return mixed
      */
-    public function getHotSearchForClass(string $classid = '' ,int $limit = 0)
+    public function getHotSearchForClass(string $classid = '', int $limit = 0)
     {
         return $this->dal()->getHotSearchForClass($classid, $limit);
+    }
+
+    /**
+     * 特殊条件查询（and | or 同时存在）
+     *
+     * @param string $where
+     * @param string $order
+     * @param int|int $limit
+     * @return mixed
+     *
+     */
+    public function matchQuery($type = 0, $order = 'newstime', int $limit = 0)
+    {
+        $page = $this->getCurrentPage();
+        return $this->dal()->getMatchQuery($type, $order, $limit, $page);
     }
 }

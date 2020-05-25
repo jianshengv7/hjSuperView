@@ -236,13 +236,14 @@ class Content extends Base
      * @param $order
      * @return array|bool
      */
-    public function getCustomList($fields, $limit, $order, $page)
+    public function getCustomList($fields, $limit, $order, $page, $operator)
     {
         $params = [
             'fields' => $fields,
             'limit' => $limit,
             'order' => $order,
-            'page' => $page
+            'page' => $page,
+            'operator' => $operator
         ];
         return $this->getData('customList', $params);
     }
@@ -281,6 +282,13 @@ class Content extends Base
         return $this->getData('getAllPl', $params);
     }
 
+    /**
+     * 内联词数据获取（4个关键词）
+     *
+     * @param $classid
+     * @param $limit
+     * @return array|bool|mixed
+     */
     public function getHotSearchForClass($classid, $limit)
     {
         $params = [
@@ -288,5 +296,25 @@ class Content extends Base
             'limit' => $limit,
         ];
         return $this->getData('getHotSearchForClass', $params);
+    }
+
+    /**
+     * 特殊条件查询（and | or 同时存在）
+     *
+     * @param $type
+     * @param $order
+     * @param $limit
+     * @param $page
+     * @return mixed
+     */
+    public function getMatchQuery($type, $order, $limit, $page)
+    {
+        $params = [
+            'type' => $type,
+            'order' => $order,
+            'limit' => $limit,
+            'page' => $page,
+        ];
+        return $this->matchQuery('matchQuery', $params);
     }
 }
