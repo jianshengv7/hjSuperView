@@ -307,7 +307,7 @@ class Content extends Base
      * @param $page
      * @return mixed
      */
-    public function getMatchQuery($type, $order, $limit, $page)
+    public function getMatchQuery($type, $limit, $order, $page)
     {
         $params = [
             'type' => $type,

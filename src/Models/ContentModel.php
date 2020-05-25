@@ -205,9 +205,9 @@ class ContentModel extends BaseModel
      * @return mixed
      *
      */
-    public function matchQuery($type = 0, $order = 'newstime', int $limit = 0)
+    public function matchQuery($type = 0, int $limit = 0, $order = 'newstime')
     {
         $page = $this->getCurrentPage();
-        return $this->dal()->getMatchQuery($type, $order, $limit, $page);
+        return $this->dal()->getMatchQuery($type, $limit, $order, $page);
     }
 }
