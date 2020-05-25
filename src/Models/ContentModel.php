@@ -210,4 +210,18 @@ class ContentModel extends BaseModel
         $page = $this->getCurrentPage();
         return $this->dal()->getMatchQuery($type, $limit, $order, $page);
     }
+
+    /**
+     * 关联查询的order方法
+     *
+     * @param string $table
+     * @param int $limit
+     * @param string $order
+     * @return mixed
+     */
+    public function allOrder(string $table = '', int $limit = 0, $order = 'newstime')
+    {
+        $page = $this->getCurrentPage();
+        return $this->dal()->getAllOrder($table, $limit, $order, $page);
+    }
 }

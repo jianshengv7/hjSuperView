@@ -315,6 +315,26 @@ class Content extends Base
             'limit' => $limit,
             'page' => $page,
         ];
-        return $this->matchQuery('matchQuery', $params);
+        return $this->getData('matchQuery', $params);
+    }
+
+    /**
+     * 关联查询的order方法
+     *
+     * @param $table
+     * @param $limit
+     * @param $order
+     * @param $page
+     * @return mixed
+     */
+    public function getAllOrder($table, $limit, $order, $page)
+    {
+        $params = [
+            'table' => $table,
+            'order' => $order,
+            'limit' => $limit,
+            'page' => $page,
+        ];
+        return $this->getData('allOrder', $params);
     }
 }
