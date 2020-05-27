@@ -105,6 +105,15 @@ class ContentModel extends BaseModel
         return $this->dal['content:' . $this->virtualModel];
     }
 
+    /**
+     * 今日更新列表.
+     */
+    public function today($classid = 0, $limit = 0, $order = 'newstime')
+    {
+        $page = $this->getCurrentPage();
+        return $this->dal()->getTodayList($classid, $page, $limit, $order);
+    }
+
 
     /**
      * 查询classid不等于某个值

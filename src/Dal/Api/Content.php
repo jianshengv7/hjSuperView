@@ -194,6 +194,25 @@ class Content extends Base
     }
 
     /**
+     * 今日更新列表
+     * @return boolean | array
+     */
+    public function getTodayList($classid, $page, $limit, $order)
+    {
+        if (!$this->isValidOrder($order)) {
+            return false;
+        }
+
+        $params = [
+            'classid' => ($classid),
+            'page'    => intval($page),
+            'limit'   => intval($limit),
+            'order'   => $order,
+        ];
+        return $this->getData('today', $params);
+    }
+
+    /**
      * 信息所属专题列表
      * @return boolean | array
      */
