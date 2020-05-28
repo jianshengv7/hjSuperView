@@ -149,7 +149,8 @@ class TopicModel extends BaseModel
      */
     public function match($fields, $limit = 0, $order = 'addtime')
     {
-        return $this->dal['zt']->getMatch($fields, $limit, $order);
+        $page = $this->getCurrentPage();
+        return $this->dal['zt']->getMatch($fields, $limit, $order, $page);
     }
 
     /**

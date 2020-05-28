@@ -193,12 +193,13 @@ class Topic extends Base
      * @param $database
      * @return array|bool
      */
-    public function getMatch($fields, $limit, $order)
+    public function getMatch($fields, $limit, $order, $page)
     {
         $params = [
             'fields' => $fields,
             'limit' => $limit,
             'order' => $order,
+            'page' => $page
         ];
         return $this->getData('match', $params);
     }
