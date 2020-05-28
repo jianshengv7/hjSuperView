@@ -245,6 +245,27 @@ class CategoryModel extends BaseModel
     }
 
     /**
+     * 通过tbname获取分类信息
+     *
+     * @param string $classpath
+     * @return bool|mixed
+     */
+    public function classTbname($tbname = '')
+    {
+        if (empty($tbname)) {
+            return false;
+        }
+        $res = [];
+        $categorys = $this->all();
+        foreach ($categorys as $category) {
+            if ($category['tbname'] == $tbname) {
+                 $res[] = $category;
+            }
+        }
+        return $res;
+    }
+
+    /**
      * 根据class_url配置获取分类页url.
      *
      * @return string
