@@ -123,7 +123,7 @@ class CacheKey
         return ':' . self::confirm_type($modelAlias)
             . '::' . $modelAlias . '::'
             . $method
-            . (isset($param['classid']) ? '::' . $param['classid'] : '')
+            . (isset($param['classid']) ? '::' . (is_array($param['classid']) ? implode(',', $param['classid']) : $param['classid']) : '')
             . self::filterStr($param, $modelAlias);
     }
 
