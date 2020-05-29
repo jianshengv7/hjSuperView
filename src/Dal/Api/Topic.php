@@ -285,4 +285,22 @@ class Topic extends Base
         ];
         return $this->getData('ztaddJoinzt', $params);
     }
+
+    /**
+     * 专题评论
+     *
+     * @param $pubid
+     * @param $limit
+     * @param $order
+     * @return array|bool|mixed
+     */
+    public function ztPl($pubid, $limit, $order)
+    {
+        $params = [
+            'pubid' => $pubid,
+            'limit' => $limit,
+            'order' => $order,
+        ];
+        return $this->getData('ztPl', $params);
+    }
 }

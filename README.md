@@ -477,6 +477,18 @@ ztadd & zt表关联信息  (参数前缀 定死为zt , ztadd)
 | limit         | 每页数据量,0为不限制                         | 否    | 0        |
 | order         | 排序字段                                     | 否    | newstime |
 
+#### 14.ztPl($pubid, $limit, $order)
+zt获取评论
+
+参数：
+| 参数名        | 描述                                         | 必填  | 默认     |
+| ------------- | -------------------------------------------- | :---: | :------: |
+| pubid        | publid                           | 是    | null     |
+| limit         | 每页数据量,0为不限制                         | 否    | 0        |
+| order         | 排序字段                                     | 否    | newstime |
+
+
+
 ### utils 工具模块
 
 #### 1. relationWord($softid)

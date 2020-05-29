@@ -214,4 +214,16 @@ class TopicModel extends BaseModel
         return $this->dal['zt']->ztaddJoinzt($fields, $limit, $order, $page);
     }
 
+    /**
+     * 专题评论
+     *
+     * @param int $pubid
+     * @param int $limit
+     * @param string $order
+     * @return mixed
+     */
+    public function ztPl($pubid = 0, $limit = 0, $order = 'saytime')
+    {
+        return $this->dal['zt']->ztPl($pubid, $limit, $order);
+    }
 }
