@@ -356,4 +356,18 @@ class Content extends Base
         ];
         return $this->getData('allOrder', $params);
     }
+
+    /**
+     * 预定义数据查询关联表 用于特殊数据获取
+     *
+     * @param $type
+     * @return array|bool|mixed
+     */
+    public function matchJoinQuery($type)
+    {
+        $params = [
+            'type' => $type,
+        ];
+        return $this->getData('matchJoinQuery', $params);
+    }
 }

@@ -233,4 +233,15 @@ class ContentModel extends BaseModel
         $page = $this->getCurrentPage();
         return $this->dal()->getAllOrder($table, $limit, $order, $page);
     }
+
+    /**
+     * 预定义数据查询关联表 用于特殊数据获取
+     *
+     * @param int $type
+     * @return mixed
+     */
+    public function matchJoinQuery($type = 1)
+    {
+        return $this->dal()->matchJoinQuery($type);
+    }
 }
