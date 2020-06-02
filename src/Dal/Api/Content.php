@@ -386,4 +386,22 @@ class Content extends Base
         ];
         return $this->getData('matchJoinQuery', $params);
     }
+
+    /**
+     * 获取评论
+     * 
+     * @param $fields
+     * @param $limit
+     * @param $order
+     * @return array|bool|mixed
+     */
+    public function matchPl($fields, $limit, $order)
+    {
+        $params = [
+            'fields' => $fields,
+            'limit' => $limit,
+            'order' => $order,
+        ];
+        return $this->getData('matchPl', $params);
+    }
 }

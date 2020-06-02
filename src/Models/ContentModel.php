@@ -256,4 +256,17 @@ class ContentModel extends BaseModel
     {
         return $this->dal()->matchJoinQuery($type);
     }
+
+    /**
+     * 获取评论
+     *
+     * @param $fields
+     * @param int $limit
+     * @param string $order
+     * @return mixed
+     */
+    public function matchPl($fields, $limit = 0, $order = 'saytime')
+    {
+        return $this->dal()->matchPl($fields, $limit, $order);
+    }
 }
