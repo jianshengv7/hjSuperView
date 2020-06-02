@@ -222,7 +222,7 @@ class Content extends Base
             'id' => ($id),
             'limit' => intval($limit),
         ];
-        return $this->getData('speciallist', $params);
+        return $this->getData('infoTopics', $params);
     }
 
     /**
@@ -315,6 +315,22 @@ class Content extends Base
             'limit' => $limit,
         ];
         return $this->getData('getHotSearchForClass', $params);
+    }
+
+    /**
+     * 内联词获取数据不够其他内联词补足
+     *
+     * @param $classid
+     * @param $limit
+     * @return array|bool|mixed
+     */
+    public function getHotSearch($classid, $limit)
+    {
+        $params = [
+            'classid' => $classid,
+            'limit' => $limit,
+        ];
+        return $this->getData('getHotSearch', $params);
     }
 
     /**

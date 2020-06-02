@@ -206,6 +206,18 @@ class ContentModel extends BaseModel
     }
 
     /**
+     * 内联词获取数据不够其他内联词补足
+     *
+     * @param string $classid
+     * @param int $limit
+     * @return mixed
+     */
+    public function getHotSearch(string $classid = '', int $limit = 0)
+    {
+        return $this->dal()->getHotSearch($classid, $limit);
+    }
+
+    /**
      * 特殊条件查询（and | or 同时存在）
      *
      * @param string $where
