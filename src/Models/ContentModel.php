@@ -282,4 +282,17 @@ class ContentModel extends BaseModel
     {
         return $this->dal()->condition($classid, $type, $value);
     }
+
+    /**
+     * 获取推荐词
+     *
+     * @param $classid
+     * @param int $softid
+     * @param int $limit
+     * @return mixed
+     */
+    public function getRecommend($classid, $softid = 0, $limit = 10)
+    {
+        return $this->dal()->getRecommend($classid, $softid, $limit);
+    }
 }

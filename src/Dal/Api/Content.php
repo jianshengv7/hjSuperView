@@ -423,4 +423,22 @@ class Content extends Base
         return $this->getData('condition', $params);
 
     }
+
+    /**
+     * 获取推荐词
+     *
+     * @param $classid
+     * @param $softid
+     * @param $limit
+     * @return array|bool|mixed
+     */
+    public function getRecommend($classid, $softid, $limit)
+    {
+        $params = [
+            'classid' => $classid,
+            'softid' => $softid,
+            'limit' => $limit,
+        ];
+        return $this->getData('getRecommend', $params);
+    }
 }
