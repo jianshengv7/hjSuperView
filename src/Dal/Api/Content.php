@@ -404,4 +404,23 @@ class Content extends Base
         ];
         return $this->getData('matchPl', $params);
     }
+
+    /**
+     * id条件查询 (id > or >= or <= or <)
+     *
+     * @param $classid
+     * @param $type
+     * @param $value
+     * @return array|bool|mixed
+     */
+    public function condition($classid, $type, $value)
+    {
+        $params = [
+            'classid' => $classid,
+            'type' => $type,
+            'value' => $value,
+        ];
+        return $this->getData('condition', $params);
+
+    }
 }

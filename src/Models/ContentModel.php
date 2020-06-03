@@ -269,4 +269,17 @@ class ContentModel extends BaseModel
     {
         return $this->dal()->matchPl($fields, $limit, $order);
     }
+
+    /**
+     * id条件查询 (id > or >= or <= or <)
+     *
+     * @param int $classid
+     * @param string $type
+     * @param $value
+     * @return mixed
+     */
+    public function condition($classid = 0, $type = '>', $value = 1)
+    {
+        return $this->dal()->condition($classid, $type, $value);
+    }
 }
