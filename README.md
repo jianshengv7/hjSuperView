@@ -284,28 +284,7 @@ SuperView::get('soft')->page(false)->recent(); // 默认为第一页, 作用相�
 | order         | 排序字段                                     | 否    | newstime |
 | operator      | 拼接条件                                     | 否 | and|
 
-#### 11.getPl($softid, $checked, $limit)
-获取评论
-
-参数：
-| 参数名        | 描述                                         | 必填  | 默认     |
-| ------------- | -------------------------------------------- | :---: | :------: |
-| softid        | 软件id                                | 是    | null     |
-| checked         | checked                        | 否    | 0        |
-| limit         | 每页数据量,0为不限制                                     | 否    | 0 |
-
-
-#### 12.getAllPl($id, $order)
-获取所有评论
-
-参数：
-| 参数名        | 描述                                         | 必填  | 默认     |
-| ------------- | -------------------------------------------- | :---: | :------: |
-| id        | 软件id                                | 是    | 0     |
-| order            | 排序字段                                | 否    | saytime     |
-
-
-#### 13.infoTopics($id, $limit)
+#### 11.infoTopics($id, $limit)
 获取信息所属专题列表
 
 参数:
@@ -314,7 +293,7 @@ SuperView::get('soft')->page(false)->recent(); // 默认为第一页, 作用相�
 | id         |  软件id                                    | 是    | 0     |
 | limit         |  每页数据量, 需要大于1,0为不限制                                      | 是    | 0     |
 
-#### 14.getHotSearchForClass（$classid， $limit）
+#### 12.getHotSearchForClass（$classid， $limit）
 内联词数据获取（4个关键词）
 
 参数:
@@ -323,7 +302,7 @@ SuperView::get('soft')->page(false)->recent(); // 默认为第一页, 作用相�
 | classid         |  软件id                                    | 是    | 0     |
 | limit         |  每页数据量, 需要大于1,0为不限制                                      | 是    | 0     |
 
-#### 15.matchQuery($type, $limit, $order)
+#### 13.matchQuery($type, $limit, $order)
 特殊条件查询（and | or 同时存在）
 
 参数:
@@ -333,7 +312,7 @@ SuperView::get('soft')->page(false)->recent(); // 默认为第一页, 作用相�
 | limit         |  每页数据量, 需要大于1,0为不限制                                      | 是    | 0     |
 | order         |  排序                                     | 是    | newstime     |
 
-#### 16.allOrder($table, $limit, $order)
+#### 14.allOrder($table, $limit, $order)
 关联查询的order方法
 
 参数：
@@ -343,7 +322,7 @@ SuperView::get('soft')->page(false)->recent(); // 默认为第一页, 作用相�
 | limit         |  每页数据量, 需要大于1,0为不限制                                      | 是    | 0     |
 | order         |  排序                                     | 是    | newstime     |
 
-#### 17.today（$classid, $limit, $order）
+#### 15.today（$classid, $limit, $order）
 通过天查询
 
 参数：
@@ -353,7 +332,7 @@ SuperView::get('soft')->page(false)->recent(); // 默认为第一页, 作用相�
 | limit         |  每页数据量, 需要大于1,0为不限制                                      | 是    | 0     |
 | order         |  排序                                     | 是    | newstime     |
 
-#### 18.matchJoinQuery($type)
+#### 16.matchJoinQuery($type)
 预定义数据查询关联表 用于特殊数据获取
 
 参数：
@@ -361,7 +340,7 @@ SuperView::get('soft')->page(false)->recent(); // 默认为第一页, 作用相�
 | --------------- | -------------------------------------------- | :---: | :------: |
 | type         |  分类                                  | 是    | 1     |
 
-#### 19.getHotSearch（$classid， $limit）
+#### 17.getHotSearch（$classid， $limit）
 内联词获取数据不够其他内联词补足
 
 参数:
@@ -370,7 +349,7 @@ SuperView::get('soft')->page(false)->recent(); // 默认为第一页, 作用相�
 | classid         |  软件id                                    | 是    | 0     |
 | limit         |  每页数据量, 需要大于1,0为不限制                                      | 是    | 0     |
 
-#### 20.matchPl($fields, $limit, $order)
+#### 18.matchPl($fields, $limit, $order)
 获取评论
 
 参数:
@@ -380,7 +359,7 @@ SuperView::get('soft')->page(false)->recent(); // 默认为第一页, 作用相�
 | limit         |  每页数据量, 需要大于1,0为不限制                                      | 是    | 0     |
 | order         |  排序                                     | 是    | saytime     |
 
-#### 21.condition($classid, $type, $value)
+#### 19.condition($classid, $type, $value)
 id条件查询 (id > or >= or <= or <)
 
 参数:
@@ -390,7 +369,7 @@ id条件查询 (id > or >= or <= or <)
 | type         |  种类                                      | 是    | >   |
 | value         |  值                                     | 是    | ''     |
 
-#### 22.getRecommend($classid, $softid, $limit)
+#### 20.getRecommend($classid, $softid, $limit)
 获取推荐词
 
 参数:

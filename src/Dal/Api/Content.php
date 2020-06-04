@@ -268,40 +268,6 @@ class Content extends Base
     }
 
     /**
-     * 获取评论
-     *
-     * @param $softid
-     * @param $checked
-     * @param $limit
-     * @return array|bool
-     */
-    public function getPl($softid, $checked, $limit)
-    {
-        $params = [
-            'softid' => $softid,
-            'checked' => $checked,
-            'limit' => $limit
-        ];
-        return $this->getData('getPl', $params);
-    }
-
-    /**
-     * 获取所有评论
-     *
-     * @param $id
-     * @param $order
-     * @return array|bool
-     */
-    public function getAllPl($id, $order)
-    {
-        $params = [
-            'id' => $id,
-            'order' => $order,
-        ];
-        return $this->getData('getAllPl', $params);
-    }
-
-    /**
      * 内联词数据获取（4个关键词）
      *
      * @param $classid

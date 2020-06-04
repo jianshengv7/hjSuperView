@@ -169,31 +169,6 @@ class ContentModel extends BaseModel
     }
 
     /**
-     * 获取评论
-     *
-     * @param int $softid
-     * @param int $checked
-     * @param int $limit
-     * @return mixed
-     */
-    public function getPl($softid = 0, $checked = 0, $limit = 0)
-    {
-        return $this->dal()->getPl($softid, $checked, $limit);
-    }
-
-    /**
-     * 获取所有评论
-     *
-     * @param $id
-     * @param string $order
-     * @return mixed
-     */
-    public function getAllPl($id, $order = 'saytime')
-    {
-        return $this->dal()->getAllPl($id, $order);
-    }
-
-    /**
      * 内联词数据获取（4个关键词）
      *
      * @param string $classid
