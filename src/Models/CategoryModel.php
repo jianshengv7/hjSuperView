@@ -237,7 +237,7 @@ class CategoryModel extends BaseModel
 
         $categorys = $this->all();
         foreach ($categorys as $category) {
-            if (strpos($category['classpath'], $classpath) !== false) {
+            if (substr(trim($category['classpath'], '/'), -strlen($classpath)) === (string) $classpath) {
                 return $category;
             }
         }
